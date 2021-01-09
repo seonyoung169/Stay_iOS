@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Stay
 //
-//  Created by SEONYOUNG LEE on 2021/01/05.
+//  Created by SEONYOUNG LEE on 2021/01/09.
 //
 
 import UIKit
