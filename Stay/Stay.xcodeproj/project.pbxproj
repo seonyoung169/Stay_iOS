@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383BE025A9DE0D00F803D2 /* AppDelegate.swift */; };
 		A9383BE325A9DE0D00F803D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383BE225A9DE0D00F803D2 /* SceneDelegate.swift */; };
-		A9383BE525A9DE0D00F803D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383BE425A9DE0D00F803D2 /* ViewController.swift */; };
+		A9383BE525A9DE0D00F803D2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383BE425A9DE0D00F803D2 /* HomeVC.swift */; };
 		A9383BE825A9DE0D00F803D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9383BE625A9DE0D00F803D2 /* Main.storyboard */; };
 		A9383BEA25A9DE0E00F803D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9383BE925A9DE0E00F803D2 /* Assets.xcassets */; };
 		A9383BED25A9DE0E00F803D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9383BEB25A9DE0E00F803D2 /* LaunchScreen.storyboard */; };
 		A9383BF825A9DE0E00F803D2 /* StayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383BF725A9DE0E00F803D2 /* StayTests.swift */; };
 		A9383C0325A9DE0E00F803D2 /* StayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C0225A9DE0E00F803D2 /* StayUITests.swift */; };
+		A9383C2525AB077600F803D2 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9383C2425AB077600F803D2 /* Calendar.storyboard */; };
+		A9383C3325AB2A8800F803D2 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9383C3225AB2A8800F803D2 /* Friend.storyboard */; };
+		A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C3725AB2B0200F803D2 /* CalendarVC.swift */; };
+		A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,7 @@
 		A9383BDD25A9DE0D00F803D2 /* Stay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9383BE025A9DE0D00F803D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9383BE225A9DE0D00F803D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A9383BE425A9DE0D00F803D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9383BE425A9DE0D00F803D2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A9383BE725A9DE0D00F803D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9383BE925A9DE0E00F803D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9383BEC25A9DE0E00F803D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		A9383BFE25A9DE0E00F803D2 /* StayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9383C0225A9DE0E00F803D2 /* StayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayUITests.swift; sourceTree = "<group>"; };
 		A9383C0425A9DE0E00F803D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9383C2425AB077600F803D2 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		A9383C3225AB2A8800F803D2 /* Friend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
+		A9383C3725AB2B0200F803D2 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,10 @@
 		A9383BDF25A9DE0D00F803D2 /* Stay */ = {
 			isa = PBXGroup;
 			children = (
+				A9383C2025AB075000F803D2 /* Storyboard */,
+				A9383C1F25AB074500F803D2 /* ViewController */,
 				A9383BE025A9DE0D00F803D2 /* AppDelegate.swift */,
 				A9383BE225A9DE0D00F803D2 /* SceneDelegate.swift */,
-				A9383BE425A9DE0D00F803D2 /* ViewController.swift */,
-				A9383BE625A9DE0D00F803D2 /* Main.storyboard */,
 				A9383BE925A9DE0E00F803D2 /* Assets.xcassets */,
 				A9383BEB25A9DE0E00F803D2 /* LaunchScreen.storyboard */,
 				A9383BEE25A9DE0E00F803D2 /* Info.plist */,
@@ -126,6 +134,26 @@
 				A9383C0425A9DE0E00F803D2 /* Info.plist */,
 			);
 			path = StayUITests;
+			sourceTree = "<group>";
+		};
+		A9383C1F25AB074500F803D2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A9383BE425A9DE0D00F803D2 /* HomeVC.swift */,
+				A9383C3725AB2B0200F803D2 /* CalendarVC.swift */,
+				A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A9383C2025AB075000F803D2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A9383BE625A9DE0D00F803D2 /* Main.storyboard */,
+				A9383C2425AB077600F803D2 /* Calendar.storyboard */,
+				A9383C3225AB2A8800F803D2 /* Friend.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9383C2525AB077600F803D2 /* Calendar.storyboard in Resources */,
 				A9383BED25A9DE0E00F803D2 /* LaunchScreen.storyboard in Resources */,
+				A9383C3325AB2A8800F803D2 /* Friend.storyboard in Resources */,
 				A9383BEA25A9DE0E00F803D2 /* Assets.xcassets in Resources */,
 				A9383BE825A9DE0D00F803D2 /* Main.storyboard in Resources */,
 			);
@@ -258,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9383BE525A9DE0D00F803D2 /* ViewController.swift in Sources */,
+				A9383BE525A9DE0D00F803D2 /* HomeVC.swift in Sources */,
+				A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */,
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
+				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
 				A9383BE325A9DE0D00F803D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
