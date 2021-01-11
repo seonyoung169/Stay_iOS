@@ -11,7 +11,6 @@
         <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Stay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -259,7 +258,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wzz-0y-ufD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="0US-FZ-ZhG"/>
                             <constraint firstItem="cX7-QC-DWX" firstAttribute="top" secondItem="IYH-Na-7dd" secondAttribute="bottom" constant="22" id="AXB-dC-Etx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYM-LK-KvH" secondAttribute="trailing" id="B7S-OS-MVE"/>
                             <constraint firstItem="cig-4S-e8o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EcV-PO-7G5"/>
@@ -274,6 +272,7 @@
                             <constraint firstItem="0J7-Eb-tpk" firstAttribute="top" secondItem="fHH-MK-6tW" secondAttribute="bottom" constant="41" id="Nof-vb-Zqe"/>
                             <constraint firstItem="fHH-MK-6tW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QlH-3Q-GsR"/>
                             <constraint firstItem="srJ-dj-U2P" firstAttribute="centerY" secondItem="agw-em-w1a" secondAttribute="centerY" id="RbD-U2-2tI"/>
+                            <constraint firstItem="Wzz-0y-ufD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Rwa-wd-IKd"/>
                             <constraint firstItem="o7A-OB-4DH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TAL-Re-9OK"/>
                             <constraint firstItem="Qcw-iM-H7G" firstAttribute="top" secondItem="u6Z-TX-4RO" secondAttribute="bottom" constant="2" id="TlC-AB-991"/>
                             <constraint firstItem="agw-em-w1a" firstAttribute="leading" secondItem="srJ-dj-U2P" secondAttribute="trailing" constant="3" id="WIE-bc-WCM"/>
@@ -310,6 +309,7 @@
                         <outlet property="standardDateLabel" destination="agw-em-w1a" id="QdY-xv-QhU"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="77.678571428571431"/>
         </scene>
