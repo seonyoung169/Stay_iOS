@@ -19,6 +19,7 @@
 		A9383C3325AB2A8800F803D2 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9383C3225AB2A8800F803D2 /* Friend.storyboard */; };
 		A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C3725AB2B0200F803D2 /* CalendarVC.swift */; };
 		A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */; };
+		A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A9383C3225AB2A8800F803D2 /* Friend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
 		A9383C3725AB2B0200F803D2 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
+		A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,8 @@
 		A9383BDF25A9DE0D00F803D2 /* Stay */ = {
 			isa = PBXGroup;
 			children = (
+				A9383C5025AC084300F803D2 /* Model */,
+				A9383C4725AC056B00F803D2 /* View */,
 				A9383C2025AB075000F803D2 /* Storyboard */,
 				A9383C1F25AB074500F803D2 /* ViewController */,
 				A9383BE025A9DE0D00F803D2 /* AppDelegate.swift */,
@@ -154,6 +158,21 @@
 				A9383C3225AB2A8800F803D2 /* Friend.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A9383C4725AC056B00F803D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9383C5025AC084300F803D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +310,7 @@
 				A9383BE525A9DE0D00F803D2 /* HomeVC.swift in Sources */,
 				A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */,
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
+				A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */,
 				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
 				A9383BE325A9DE0D00F803D2 /* SceneDelegate.swift in Sources */,
 			);
