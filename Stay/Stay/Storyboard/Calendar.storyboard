@@ -21,10 +21,14 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBack" translatesAutoresizingMaskIntoConstraints="NO" id="RJE-7G-vH6">
                                         <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="0JN-97-CJX"/>
                                             <constraint firstAttribute="width" constant="24" id="Wg3-9h-p5F"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="siQ-gv-5df" appends="YES" id="9dG-oh-4Ob"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdX-NI-QGS">
                                         <rect key="frame" x="189" y="15.5" width="36.5" height="17"/>
@@ -167,8 +171,19 @@
                             <constraint firstItem="1MB-gv-ZLA" firstAttribute="trailing" secondItem="Shs-NA-vqu" secondAttribute="trailing" id="xTd-2T-eBc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="RJE-7G-vH6" id="Vpc-FJ-49S"/>
+                        <outlet property="bestCount" destination="tu3-ub-BSV" id="gui-no-qsf"/>
+                        <outlet property="currentCount" destination="iau-06-k5P" id="qFo-eK-TQO"/>
+                        <outlet property="yearAndMonth" destination="UF9-8w-pPN" id="FXV-FC-cbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bw-hZ-uq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="siQ-gv-5df">
+                    <connections>
+                        <action selector="goHomeVC:" destination="5mo-bH-hHx" id="baC-lx-1Vv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="51" y="94"/>
         </scene>
