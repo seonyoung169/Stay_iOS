@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,9 +25,6 @@
                                             <constraint firstAttribute="height" constant="24" id="0JN-97-CJX"/>
                                             <constraint firstAttribute="width" constant="24" id="Wg3-9h-p5F"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="siQ-gv-5df" appends="YES" id="9dG-oh-4Ob"/>
-                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdX-NI-QGS">
                                         <rect key="frame" x="189" y="15.5" width="36.5" height="17"/>
@@ -66,13 +62,32 @@
                                             <constraint firstItem="YJK-mt-OZ2" firstAttribute="leading" secondItem="eqo-4D-V7J" secondAttribute="leading" constant="24" id="bT0-Wr-aV9"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5p-FV-5y3" customClass="FSCalendar">
+                                        <rect key="frame" x="12" y="63" width="390" height="336"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                                <color key="value" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="eqo-4D-V7J" firstAttribute="top" secondItem="E8z-hN-F9X" secondAttribute="top" id="0FH-kP-oTT"/>
                                     <constraint firstAttribute="trailing" secondItem="eqo-4D-V7J" secondAttribute="trailing" id="1O2-EI-UiO"/>
+                                    <constraint firstItem="I5p-FV-5y3" firstAttribute="leading" secondItem="E8z-hN-F9X" secondAttribute="leading" constant="12" id="N7o-Hp-s0y"/>
+                                    <constraint firstItem="I5p-FV-5y3" firstAttribute="top" secondItem="eqo-4D-V7J" secondAttribute="bottom" id="a5d-d6-hQu"/>
                                     <constraint firstAttribute="height" constant="399" id="fKQ-5w-NPO"/>
+                                    <constraint firstAttribute="bottom" secondItem="I5p-FV-5y3" secondAttribute="bottom" id="uhL-zL-2pd"/>
                                     <constraint firstItem="eqo-4D-V7J" firstAttribute="leading" secondItem="E8z-hN-F9X" secondAttribute="leading" id="v7H-mV-M5q"/>
+                                    <constraint firstAttribute="trailing" secondItem="I5p-FV-5y3" secondAttribute="trailing" constant="12" id="vR8-m6-VIq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16e-BP-eDw">
@@ -174,16 +189,12 @@
                     <connections>
                         <outlet property="backBtn" destination="RJE-7G-vH6" id="Vpc-FJ-49S"/>
                         <outlet property="bestCount" destination="tu3-ub-BSV" id="gui-no-qsf"/>
+                        <outlet property="calendar" destination="I5p-FV-5y3" id="TXH-4S-o1v"/>
                         <outlet property="currentCount" destination="iau-06-k5P" id="qFo-eK-TQO"/>
                         <outlet property="yearAndMonth" destination="UF9-8w-pPN" id="FXV-FC-cbQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bw-hZ-uq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="siQ-gv-5df">
-                    <connections>
-                        <action selector="goHomeVC:" destination="5mo-bH-hHx" id="baC-lx-1Vv"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="51" y="94"/>
         </scene>
@@ -192,8 +203,5 @@
         <image name="icBack" width="24" height="24"/>
         <image name="icBestRecord" width="20" height="20"/>
         <image name="icCurrentRecord" width="20" height="20"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
