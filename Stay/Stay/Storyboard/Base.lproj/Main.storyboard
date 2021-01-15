@@ -340,10 +340,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="calendarArea" destination="GHp-h3-hgw" id="ayu-Hz-dF5"/>
+                        <outlet property="circleArea" destination="IYH-Na-7dd" id="Lmc-Fy-Alb"/>
                         <outlet property="confirmedCountLabel" destination="Qcw-iM-H7G" id="Ucq-c0-OgS"/>
                         <outlet property="dayCountLabel" destination="56M-9Z-Jv9" id="CdQ-HB-66I"/>
                         <outlet property="friendArea" destination="Qwi-gZ-rIE" id="4PU-mC-dIE"/>
-                        <outlet property="kakaoShareBtn" destination="0J7-Eb-tpk" id="zB5-A6-BR0"/>
+                        <outlet property="kakaoShareView" destination="0J7-Eb-tpk" id="br3-0a-e1A"/>
                         <outlet property="locationLabel" destination="ega-Xs-G5j" id="b64-TU-Myb"/>
                         <outlet property="settingBtn" destination="xRs-z9-TiA" id="BKV-PC-sxl"/>
                         <outlet property="stageLabel" destination="u6Z-TX-4RO" id="dtA-fc-CLM"/>
