@@ -248,10 +248,50 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYH-Na-7dd">
                                 <rect key="frame" x="117" y="206.5" width="180" height="180"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icMainCircle" translatesAutoresizingMaskIntoConstraints="NO" id="Qjn-Li-n5i">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연속으로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12q-qX-ULe">
+                                        <rect key="frame" x="19" y="82" width="62.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-2I-gOE">
+                                        <rect key="frame" x="141.5" y="82" width="16" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="거리두기 중 이에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0V-1W-EKs">
+                                        <rect key="frame" x="25" y="110.5" width="139" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56M-9Z-Jv9">
+                                        <rect key="frame" x="91.5" y="36" width="40" height="79"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="66"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="R0V-1W-EKs" firstAttribute="leading" secondItem="IYH-Na-7dd" secondAttribute="leading" constant="25" id="8cx-2u-x9g"/>
+                                    <constraint firstItem="12q-qX-ULe" firstAttribute="leading" secondItem="IYH-Na-7dd" secondAttribute="leading" constant="19" id="9yi-q8-2Dy"/>
+                                    <constraint firstItem="Yuw-2I-gOE" firstAttribute="leading" secondItem="56M-9Z-Jv9" secondAttribute="trailing" constant="10" id="FPV-m6-xVS"/>
+                                    <constraint firstItem="12q-qX-ULe" firstAttribute="firstBaseline" secondItem="56M-9Z-Jv9" secondAttribute="firstBaseline" id="LJz-Wh-z39"/>
+                                    <constraint firstItem="Qjn-Li-n5i" firstAttribute="top" secondItem="IYH-Na-7dd" secondAttribute="top" id="OM2-ol-B9r"/>
+                                    <constraint firstItem="Qjn-Li-n5i" firstAttribute="leading" secondItem="IYH-Na-7dd" secondAttribute="leading" id="Qg3-ol-RR9"/>
+                                    <constraint firstItem="56M-9Z-Jv9" firstAttribute="leading" secondItem="12q-qX-ULe" secondAttribute="trailing" constant="10" id="RVb-OZ-U6V"/>
+                                    <constraint firstItem="R0V-1W-EKs" firstAttribute="top" secondItem="12q-qX-ULe" secondAttribute="bottom" constant="7" id="XhW-B4-Ayy"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qjn-Li-n5i" secondAttribute="bottom" id="Ynb-10-rqb"/>
                                     <constraint firstAttribute="width" constant="180" id="ZRD-vV-hmZ"/>
+                                    <constraint firstItem="56M-9Z-Jv9" firstAttribute="firstBaseline" secondItem="Yuw-2I-gOE" secondAttribute="firstBaseline" id="gPw-ya-WjG"/>
+                                    <constraint firstItem="12q-qX-ULe" firstAttribute="top" secondItem="IYH-Na-7dd" secondAttribute="top" constant="82" id="gZ0-64-wje"/>
                                     <constraint firstAttribute="height" constant="180" id="hAZ-Fz-QR6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qjn-Li-n5i" secondAttribute="trailing" id="q5L-Li-l2q"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -301,6 +341,7 @@
                     <connections>
                         <outlet property="calendarArea" destination="GHp-h3-hgw" id="ayu-Hz-dF5"/>
                         <outlet property="confirmedCountLabel" destination="Qcw-iM-H7G" id="Ucq-c0-OgS"/>
+                        <outlet property="dayCountLabel" destination="56M-9Z-Jv9" id="CdQ-HB-66I"/>
                         <outlet property="friendArea" destination="Qwi-gZ-rIE" id="4PU-mC-dIE"/>
                         <outlet property="kakaoShareBtn" destination="0J7-Eb-tpk" id="zB5-A6-BR0"/>
                         <outlet property="locationLabel" destination="ega-Xs-G5j" id="b64-TU-Myb"/>
@@ -335,13 +376,11 @@
     <resources>
         <image name="icCalendar" width="19.5" height="21"/>
         <image name="icFriends" width="24" height="21"/>
+        <image name="icMainCircle" width="180" height="180"/>
         <image name="icMapPin" width="14" height="16.5"/>
         <image name="icSetting" width="23" height="23"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

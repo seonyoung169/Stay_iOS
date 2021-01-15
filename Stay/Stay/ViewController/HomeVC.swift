@@ -14,7 +14,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var stageLabel: UILabel!
     @IBOutlet weak var standardDateLabel: UILabel!
     @IBOutlet weak var confirmedCountLabel: UILabel!
-    
+    @IBOutlet weak var dayCountLabel: UILabel!
     @IBOutlet weak var calendarArea: UIView!
     @IBOutlet weak var friendArea: UIView!
     
