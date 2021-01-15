@@ -41,6 +41,7 @@ class FriendVC: UIViewController {
     }
     
     @IBAction func goToHome(_ sender: Any) {
+        print("friend")
         self.navigationController?.popViewController(animated: true)
     }
     
