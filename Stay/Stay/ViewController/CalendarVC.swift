@@ -56,13 +56,11 @@ extension CalendarVC : FSCalendarDelegate, FSCalendarDataSource {
             cell.backgroundView = UIImageView(image: UIImage(named: "icStamp"))
             
             let len = Int ((calendar.frame.size.width / 7) * 0.66)
-            print("len : ", len)
             cell.backgroundView?.frame = CGRect(x: 0, y: 0, width: len, height: len)
-            
+        
             cell.backgroundView?.translatesAutoresizingMaskIntoConstraints = false
             cell.backgroundView?.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
             cell.backgroundView?.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
-
         }
         
         return cell
