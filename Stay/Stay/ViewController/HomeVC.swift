@@ -43,6 +43,7 @@ class HomeVC: UIViewController {
         let settingTapGesture = UITapGestureRecognizer(target:self, action : #selector(tapSettingButton(sender:)))
         self.settingButton.addGestureRecognizer(settingTapGesture)
     }
+    
     @objc func tapCalendarArea(sender : UITapGestureRecognizer){
         let calendarStoryboard = UIStoryboard(name: "Calendar", bundle: nil)
         guard let calendarVC = calendarStoryboard.instantiateInitialViewController() else {
@@ -52,6 +53,7 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(calendarVC, animated: true)
         
     }
+    
     @objc func tapFriendArea(sender : UITapGestureRecognizer) {
         let friendStoryboard = UIStoryboard(name: "Friend", bundle: nil)
         guard let friendVC = friendStoryboard.instantiateInitialViewController() else {
