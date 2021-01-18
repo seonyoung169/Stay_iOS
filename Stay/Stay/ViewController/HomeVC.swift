@@ -9,7 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController {
 
-    @IBOutlet weak var settingBtn: UIBarButtonItem!
+    @IBOutlet weak var settingButton: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var stageLabel: UILabel!
     @IBOutlet weak var standardDateLabel: UILabel!
@@ -39,7 +39,11 @@ class HomeVC: UIViewController {
         let kakaoShareTapGesture = UITapGestureRecognizer(target:self, action : #selector(tapKakaoShareView(sender:)))
         self.kakaoShareView.addGestureRecognizer(kakaoShareTapGesture)
         
+        self.settingButton.isUserInteractionEnabled = true
+        let settingTapGesture = UITapGestureRecognizer(target:self, action : #selector(tapSettingButton(sender:)))
+        self.settingButton.addGestureRecognizer(settingTapGesture)
     }
+    
     @objc func tapCalendarArea(sender : UITapGestureRecognizer){
         let calendarStoryboard = UIStoryboard(name: "Calendar", bundle: nil)
         guard let calendarVC = calendarStoryboard.instantiateInitialViewController() else {
@@ -49,6 +53,7 @@ class HomeVC: UIViewController {
         self.navigationController?.pushViewController(calendarVC, animated: true)
         
     }
+    
     @objc func tapFriendArea(sender : UITapGestureRecognizer) {
         let friendStoryboard = UIStoryboard(name: "Friend", bundle: nil)
         guard let friendVC = friendStoryboard.instantiateInitialViewController() else {
@@ -60,6 +65,16 @@ class HomeVC: UIViewController {
     
     @objc func tapKakaoShareView(sender : UITapGestureRecognizer){
         print("kakaoshare")
+    }
+    
+    @objc func tapSettingButton(sender : UIGestureRecognizer){
+        print("tapSettingButton")
+        let settingStoryboard = UIStoryboard(name: "Setting", bundle: nil)
+        guard let settingVC = settingStoryboard.instantiateInitialViewController() else {
+            print("settingVC nil")
+            return
+        }
+        self.navigationController?.pushViewController(settingVC, animated: true)
     }
     
     // MARK : Setting View

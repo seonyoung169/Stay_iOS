@@ -21,6 +21,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icSetting" translatesAutoresizingMaskIntoConstraints="NO" id="JjB-we-qOM">
                                         <rect key="frame" x="376" y="13" width="22" height="22"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="5H1-uZ-BfR"/>
                                             <constraint firstAttribute="width" constant="22" id="PRB-E2-usT"/>
@@ -346,7 +347,7 @@
                         <outlet property="friendArea" destination="Qwi-gZ-rIE" id="4PU-mC-dIE"/>
                         <outlet property="kakaoShareView" destination="0J7-Eb-tpk" id="br3-0a-e1A"/>
                         <outlet property="locationLabel" destination="ega-Xs-G5j" id="b64-TU-Myb"/>
-                        <outlet property="settingBtn" destination="xRs-z9-TiA" id="BKV-PC-sxl"/>
+                        <outlet property="settingButton" destination="JjB-we-qOM" id="B7f-sc-rRe"/>
                         <outlet property="stageLabel" destination="u6Z-TX-4RO" id="dtA-fc-CLM"/>
                         <outlet property="standardDateLabel" destination="agw-em-w1a" id="QdY-xv-QhU"/>
                     </connections>

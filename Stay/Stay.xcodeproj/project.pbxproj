@@ -24,6 +24,9 @@
 		A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */; };
 		A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */; };
 		A97B5CC425AF0A6A001932FD /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B5CC325AF0A6A001932FD /* CalendarCell.swift */; };
+		A97E429725B1C90B0005EB37 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97E429625B1C90B0005EB37 /* Setting.storyboard */; };
+		A97E429C25B1CA8E0005EB37 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E429B25B1CA8E0005EB37 /* SettingVC.swift */; };
+		A97E42A425B5AB550005EB37 /* MyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42A325B5AB550005EB37 /* MyInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
 		A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		A97B5CC325AF0A6A001932FD /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		A97E429625B1C90B0005EB37 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		A97E429B25B1CA8E0005EB37 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		A97E42A325B5AB550005EB37 /* MyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoVC.swift; sourceTree = "<group>"; };
 		B5D3412F1EE93746D024C6DC /* Pods_Stay_StayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stay_StayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6D9E1C17A776CE2497364C /* Pods-Stay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay.debug.xcconfig"; path = "Target Support Files/Pods-Stay/Pods-Stay.debug.xcconfig"; sourceTree = "<group>"; };
 		DBBE744DA31116500434D629 /* Pods-Stay-StayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay-StayUITests.release.xcconfig"; path = "Target Support Files/Pods-Stay-StayUITests/Pods-Stay-StayUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +194,8 @@
 				A9383BE425A9DE0D00F803D2 /* HomeVC.swift */,
 				A9383C3725AB2B0200F803D2 /* CalendarVC.swift */,
 				A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */,
+				A97E429B25B1CA8E0005EB37 /* SettingVC.swift */,
+				A97E42A325B5AB550005EB37 /* MyInfoVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 				A9383BE625A9DE0D00F803D2 /* Main.storyboard */,
 				A9383C2425AB077600F803D2 /* Calendar.storyboard */,
 				A9383C3225AB2A8800F803D2 /* Friend.storyboard */,
+				A97E429625B1C90B0005EB37 /* Setting.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				A9383C3325AB2A8800F803D2 /* Friend.storyboard in Resources */,
 				A9383BEA25A9DE0E00F803D2 /* Assets.xcassets in Resources */,
 				A9383BE825A9DE0D00F803D2 /* Main.storyboard in Resources */,
+				A97E429725B1C90B0005EB37 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +474,8 @@
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
 				A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */,
 				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
+				A97E42A425B5AB550005EB37 /* MyInfoVC.swift in Sources */,
+				A97E429C25B1CA8E0005EB37 /* SettingVC.swift in Sources */,
 				A9383BE325A9DE0D00F803D2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
