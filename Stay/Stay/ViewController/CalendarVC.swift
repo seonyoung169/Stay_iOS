@@ -43,6 +43,7 @@ extension CalendarVC : FSCalendarDelegate, FSCalendarDataSource {
         self.calendar.locale = Locale(identifier: "ko_KR")
         self.calendar.appearance.weekdayTextColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
         self.calendar.allowsSelection = false
+        self.calendar.today = nil
         
         self.calendar.register(CalendarCell.self, forCellReuseIdentifier: "CalendarCell")
     }
@@ -75,7 +76,7 @@ extension CalendarVC : FSCalendarDelegate, FSCalendarDataSource {
             line.translatesAutoresizingMaskIntoConstraints = false
             line.leadingAnchor.constraint(equalTo: basicView.leadingAnchor).isActive = true
             line.trailingAnchor.constraint(equalTo: basicView.trailingAnchor).isActive = true
-            line.bottomAnchor.constraint(equalTo: basicView.bottomAnchor).isActive = true
+            line.bottomAnchor.constraint(equalTo: basicView.bottomAnchor, constant: -2).isActive = true
             line.heightAnchor.constraint(equalToConstant: 1).isActive = true
             
             if(formatter.string(from : date) < formatter.string(from : Date())){ // set stamp image
@@ -85,7 +86,7 @@ extension CalendarVC : FSCalendarDelegate, FSCalendarDataSource {
                 
                 stamp.translatesAutoresizingMaskIntoConstraints = false
                 stamp.centerXAnchor.constraint(equalTo: basicView.centerXAnchor).isActive = true
-                stamp.centerYAnchor.constraint(equalTo: basicView.centerYAnchor).isActive = true
+                stamp.centerYAnchor.constraint(equalTo: basicView.centerYAnchor, constant: -3).isActive = true
             }
         }else{  // not this month
         }
