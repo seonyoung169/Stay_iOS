@@ -15,15 +15,19 @@ class HomeVC: UIViewController {
     @IBOutlet weak var standardDateLabel: UILabel!
     @IBOutlet weak var confirmedCountLabel: UILabel!
     
-    @IBOutlet weak var circleArea: UIView!
-    @IBOutlet weak var dayCountLabel: UILabel!
     @IBOutlet weak var calendarArea: UIView!
     @IBOutlet weak var friendArea: UIView!
     @IBOutlet weak var kakaoShareView: UIView!
     
+    private let circle = UIImageView(image: UIImage(named: "icMainCircle"))
+    private let circleMessage = UILabel()
+    private let message = UILabel()
+    private let exception = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        adjustViewsLocation()
+        setCircleAndLabelOnView()
+        //setCalendarFriendBar()
         setTapGesture()
         setKakaoShareBtn()
     }
@@ -82,10 +86,76 @@ class HomeVC: UIViewController {
         self.kakaoShareView.layer.cornerRadius = 10
     }
     
-    func adjustViewsLocation() -> Void {
-        self.circleArea.translatesAutoresizingMaskIntoConstraints = false
-        self.circleArea.topAnchor.constraint(equalTo: self.standardDateLabel.bottomAnchor).isActive = true
+    // MARK : 동그라미와 그 안, 아래 라벨 코드로 동적 적용
+    func setCircleAndLabelOnView() {
+        let diameter = 180
+        let circleVerticalLocation = self.view.frame.height * 80 / 740
+        
+        // Circle
+        circle.frame = CGRect(x: 0, y: 0, width: diameter, height: diameter)
+        circle.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(circle)
+        circle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        circle.topAnchor.constraint(equalTo: self.standardDateLabel.bottomAnchor, constant: circleVerticalLocation).isActive = true
+        
+        // Text in Circle
+        circleMessage.numberOfLines = 2
+        circleMessage.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+        circleMessage.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        circleMessage.textAlignment = .center
+        
+        let attributedString = NSMutableAttributedString(string: "연속으로 5 일\n거리두기 중 이에요!")
+        let bigAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 66, weight: .medium)]
+        let smallAttrinbutes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)]
+        attributedString.addAttributes(bigAttributes, range: _NSRange(location: 5, length: 1))
+        attributedString.addAttributes(smallAttrinbutes, range: NSRange(location: 8, length: 11))
+        
+        circleMessage.attributedText = attributedString
+        circle.addSubview(circleMessage)
+        
+        circleMessage.translatesAutoresizingMaskIntoConstraints = false
+        circleMessage.centerXAnchor.constraint(equalTo: circle.centerXAnchor).isActive = true
+        circleMessage.topAnchor.constraint(equalTo: circle.topAnchor, constant: 35).isActive = true
+        
+        // Text below Circle
+        message.text = "당신은 거리두기를 잘하는 모범시민!"
+        message.textAlignment = .center
+        message.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+        message.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        self.view.addSubview(message)
+        
+        message.translatesAutoresizingMaskIntoConstraints = false
+        message.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        message.topAnchor.constraint(equalTo: circle.bottomAnchor, constant: 22).isActive = true
+        
+        exception.text = "(집, 직장 제외)"
+        exception.textAlignment = .center
+        exception.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+        exception.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        self.view.addSubview(exception)
+        
+        exception.translatesAutoresizingMaskIntoConstraints = false
+        exception.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        exception.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 0).isActive = true
     }
+    
+//    func setCalendarFriendBar() {
+//        let container = UIView()
+//        container.backgroundColor = .blue
+//        container.translatesAutoresizingMaskIntoConstraints = false
+//
+//        self.view.addSubview(container)
+//
+//        let containerVerticalLocation = (self.view.frame.height * 93 / 740) * 1.2
+//        print(containerVerticalLocation)
+//
+//        container.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        container.topAnchor.constraint(equalTo: self.circle.bottomAnchor, constant: containerVerticalLocation).isActive = true
+//        container.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+//        container.heightAnchor.constraint(equalToConstant: 59).isActive = true
+//
+//    }
 
 }
 
