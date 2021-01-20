@@ -19,9 +19,15 @@ class HomeVC: UIViewController {
     @IBOutlet weak var friendArea: UIView!
     @IBOutlet weak var kakaoShareView: UIView!
     
+    private let circle = UIImageView(image: UIImage(named: "icMainCircle"))
+    private let circleMessage = UILabel()
+    private let message = UILabel()
+    private let exception = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setCircleAndLabelOnView()
+        //setCalendarFriendBar()
         setTapGesture()
         setKakaoShareBtn()
     }
@@ -86,7 +92,6 @@ class HomeVC: UIViewController {
         let circleVerticalLocation = self.view.frame.height * 80 / 740
         
         // Circle
-        let circle = UIImageView(image: UIImage(named: "icMainCircle"))
         circle.frame = CGRect(x: 0, y: 0, width: diameter, height: diameter)
         circle.translatesAutoresizingMaskIntoConstraints = false
         
@@ -95,7 +100,6 @@ class HomeVC: UIViewController {
         circle.topAnchor.constraint(equalTo: self.standardDateLabel.bottomAnchor, constant: circleVerticalLocation).isActive = true
         
         // Text in Circle
-        let circleMessage = UILabel()
         circleMessage.numberOfLines = 2
         circleMessage.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
         circleMessage.font = UIFont.systemFont(ofSize: 18, weight: .regular)
@@ -115,7 +119,6 @@ class HomeVC: UIViewController {
         circleMessage.topAnchor.constraint(equalTo: circle.topAnchor, constant: 35).isActive = true
         
         // Text below Circle
-        let message = UILabel()
         message.text = "당신은 거리두기를 잘하는 모범시민!"
         message.textAlignment = .center
         message.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
@@ -126,7 +129,6 @@ class HomeVC: UIViewController {
         message.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         message.topAnchor.constraint(equalTo: circle.bottomAnchor, constant: 22).isActive = true
         
-        let exception = UILabel()
         exception.text = "(집, 직장 제외)"
         exception.textAlignment = .center
         exception.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
@@ -137,6 +139,23 @@ class HomeVC: UIViewController {
         exception.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         exception.topAnchor.constraint(equalTo: message.bottomAnchor, constant: 0).isActive = true
     }
+    
+//    func setCalendarFriendBar() {
+//        let container = UIView()
+//        container.backgroundColor = .blue
+//        container.translatesAutoresizingMaskIntoConstraints = false
+//
+//        self.view.addSubview(container)
+//
+//        let containerVerticalLocation = (self.view.frame.height * 93 / 740) * 1.2
+//        print(containerVerticalLocation)
+//
+//        container.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        container.topAnchor.constraint(equalTo: self.circle.bottomAnchor, constant: containerVerticalLocation).isActive = true
+//        container.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+//        container.heightAnchor.constraint(equalToConstant: 59).isActive = true
+//
+//    }
 
 }
 
