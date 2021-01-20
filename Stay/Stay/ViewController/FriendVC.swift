@@ -25,10 +25,10 @@ class FriendVC: UIViewController {
     @IBOutlet weak var distanceMessage: UILabel!
     @IBOutlet weak var friendTableView: UITableView!
     @IBOutlet weak var inviteFriendBtn: UIView!
-    @IBOutlet weak var friendTableViewHeight: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.backBtn.isUserInteractionEnabled = true
         setFriendTableView()
         setInviteBox()
     }
@@ -37,7 +37,6 @@ class FriendVC: UIViewController {
         self.friendTableView.dataSource = self
         self.friendTableView.delegate = self
         self.friendTableView.tableFooterView = UIView()
-        self.friendTableViewHeight.constant = CGFloat(Double(self.friendList.count) * 50.5)
     }
     
     @IBAction func goToHome(_ sender: Any) {
