@@ -106,8 +106,8 @@
                                                                         <constraint firstAttribute="height" constant="36" id="Cuf-sA-e5e"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최서정 🥇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-We-Gx7">
-                                                                    <rect key="frame" x="69" y="17" width="60.5" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최서정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qg-We-Gx7">
+                                                                    <rect key="frame" x="69" y="17" width="36.5" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -118,6 +118,13 @@
                                                                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DF-pC-jZ2">
+                                                                    <rect key="frame" x="105.5" y="18.5" width="14" height="14"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="14" id="MxJ-gh-Pbe"/>
+                                                                        <constraint firstAttribute="height" constant="14" id="bUN-a0-5tO"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="gqd-AK-k8B" firstAttribute="leading" secondItem="XRB-cX-4L3" secondAttribute="leading" constant="23" id="3X5-1b-Adv"/>
@@ -125,6 +132,8 @@
                                                                 <constraint firstAttribute="trailing" secondItem="jfH-sK-a5i" secondAttribute="trailing" constant="24" id="5bh-hs-iTc"/>
                                                                 <constraint firstItem="gqd-AK-k8B" firstAttribute="top" secondItem="XRB-cX-4L3" secondAttribute="top" constant="7" id="8kC-mi-zud"/>
                                                                 <constraint firstItem="4qg-We-Gx7" firstAttribute="leading" secondItem="gqd-AK-k8B" secondAttribute="trailing" constant="10" id="J2e-Cn-KV5"/>
+                                                                <constraint firstItem="3DF-pC-jZ2" firstAttribute="centerY" secondItem="XRB-cX-4L3" secondAttribute="centerY" id="eAh-f9-4Df"/>
+                                                                <constraint firstItem="3DF-pC-jZ2" firstAttribute="leading" secondItem="4qg-We-Gx7" secondAttribute="trailing" id="plX-Ix-0Dr"/>
                                                                 <constraint firstItem="jfH-sK-a5i" firstAttribute="centerY" secondItem="XRB-cX-4L3" secondAttribute="centerY" id="r3o-8Y-wsT"/>
                                                                 <constraint firstItem="4qg-We-Gx7" firstAttribute="centerY" secondItem="XRB-cX-4L3" secondAttribute="centerY" id="uQM-5f-TFt"/>
                                                             </constraints>
@@ -133,6 +142,7 @@
                                                             <outlet property="days" destination="jfH-sK-a5i" id="32l-4m-h7g"/>
                                                             <outlet property="name" destination="4qg-We-Gx7" id="PgP-0a-qwc"/>
                                                             <outlet property="profileImage" destination="gqd-AK-k8B" id="sdq-sF-T7d"/>
+                                                            <outlet property="rankImage" destination="3DF-pC-jZ2" id="NHl-pV-DBU"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
