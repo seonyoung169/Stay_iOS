@@ -7,18 +7,7 @@
 
 import UIKit
 
-//struct Friend {
-//    let name : String
-//    let days : Int
-//}
-
 class FriendVC: UIViewController {
-//    let friendList : [Friend] = [
-//        Friend(name: "최서정", days: 12), Friend(name: "최고운", days: 11), Friend(name: "김다은", days: 10),
-//        Friend(name: "양시연", days: 8), Friend(name: "박종근", days: 7), Friend(name: "이한빈", days: 5),
-//        Friend(name: "김우용", days: 4), Friend(name: "최윤호", days: 2), Friend(name: "박주연", days: 0),
-//        Friend(name: "신예지", days: 0), Friend(name: "박선희", days: 0), Friend(name: "이선영", days: 0),
-//    ]
     
     @IBOutlet weak var backBtn: UIImageView!
     @IBOutlet weak var nameMessage: UILabel!
@@ -39,18 +28,17 @@ class FriendVC: UIViewController {
         
     }
     
+    // MARK : Getting Data from Server
     func getDataFromServer() {
         FriendService.shared.getFriendList() {
             result in
             switch result{
             case.success(let successData) :
-                print("************** success **************")
-                print(successData)
+                print("SUCCESS : ", successData)
                 self.userAndFriendData = successData.data
                 self.setUserData()
             case.failure(let failData) :
-                print("************** failure **************")
-                print(failData)
+                print("FAIL : ", failData)
             }
         }
     }
@@ -74,6 +62,7 @@ class FriendVC: UIViewController {
         self.distanceMessage.text = "연속 \(self.userAndFriendData.user.currentRecord)일 거리두기 중!"
     }
     
+    // MARK : View Setting
     func setFriendTableView() -> Void {
         self.friendTableView.dataSource = self
         self.friendTableView.delegate = self
@@ -91,6 +80,8 @@ class FriendVC: UIViewController {
     
 }
 
+
+// MARK : tablaview function
 extension FriendVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
