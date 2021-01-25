@@ -16,12 +16,30 @@ class CalendarVC: UIViewController {
     @IBOutlet weak var currentCount: UILabel!
     @IBOutlet weak var bestCount: NSLayoutConstraint!
     
+//    var calendarAndRecord = CalendarData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackBtnTapGesture()
         setCalendar()
+        //getDataFromServer()
     }
     
+    // MARK : Getting Data from Server
+//    func getDataFromServer() {
+//        CalendarService.shared.getCalendarData() { result in
+//            switch result {
+//            case .success(let successData):
+//                print("SUCCESS : ", successData)
+//                self.calendarAndRecord = successData
+//
+//            case .failure(let failureData):
+//                print("FAILURE : ", failureData)
+//            }
+//        }
+//    }
+    
+    // MARK : View Setting
     func setBackBtnTapGesture() -> Void {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tap))
         self.backBtn.addGestureRecognizer(gesture)
@@ -31,9 +49,10 @@ class CalendarVC: UIViewController {
     @objc func tap(sender : UIGestureRecognizer){
         self.navigationController?.popViewController(animated: true)
     }
-    
 }
 
+
+// MARK : Building Calendar
 extension CalendarVC : FSCalendarDelegate, FSCalendarDataSource {
     
     func setCalendar() -> Void {
