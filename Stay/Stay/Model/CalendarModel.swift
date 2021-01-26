@@ -14,6 +14,16 @@ struct CalendarResponse : Codable {
 }
 
 struct CalendarData : Codable {
+    let record : Record
+    let stamp : [Stamp]
+}
+
+struct Record : Codable {
+    let currentRecord : Int
+    let bestRecord : Int
+}
+
+struct Stamp : Codable {
     let date : String
     let get : Bool
 }

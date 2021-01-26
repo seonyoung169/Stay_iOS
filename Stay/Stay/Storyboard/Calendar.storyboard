@@ -191,7 +191,7 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="RJE-7G-vH6" id="Vpc-FJ-49S"/>
-                        <outlet property="bestCount" destination="tu3-ub-BSV" id="gui-no-qsf"/>
+                        <outlet property="bestCount" destination="7rj-Jf-co7" id="4tG-Gw-NpX"/>
                         <outlet property="calendar" destination="I5p-FV-5y3" id="TXH-4S-o1v"/>
                         <outlet property="currentCount" destination="iau-06-k5P" id="qFo-eK-TQO"/>
                         <outlet property="yearAndMonth" destination="UF9-8w-pPN" id="FXV-FC-cbQ"/>
