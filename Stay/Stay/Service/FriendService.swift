@@ -27,9 +27,9 @@ class FriendService{
                 let decoder = JSONDecoder()
                 
                 do{
-                    let data = try decoder.decode(FriendResponse.self, from: dataResponse.data!)
+                    let decodedData = try decoder.decode(FriendResponse.self, from: dataResponse.data!)
                     print("decoding success")
-                    completionHandler(.success(data))
+                    completionHandler(.success(decodedData))
                     
                 }catch{
                     print(error)

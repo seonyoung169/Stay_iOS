@@ -30,6 +30,8 @@
 		A97E42EB25B862DE0005EB37 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42EA25B862DE0005EB37 /* FriendService.swift */; };
 		A97E42F325B864560005EB37 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42F225B864560005EB37 /* FriendModel.swift */; };
 		A97E42FC25B866190005EB37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42FB25B866190005EB37 /* Config.swift */; };
+		A9A80E8B25BE7C8C00B22665 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */; };
+		A9A80E9025BE7D1500B22665 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80E8F25BE7D1500B22665 /* CalendarService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		A97E42EA25B862DE0005EB37 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		A97E42F225B864560005EB37 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		A97E42FB25B866190005EB37 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		A9A80E8F25BE7D1500B22665 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		B5D3412F1EE93746D024C6DC /* Pods_Stay_StayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stay_StayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6D9E1C17A776CE2497364C /* Pods-Stay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay.debug.xcconfig"; path = "Target Support Files/Pods-Stay/Pods-Stay.debug.xcconfig"; sourceTree = "<group>"; };
 		DBBE744DA31116500434D629 /* Pods-Stay-StayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay-StayUITests.release.xcconfig"; path = "Target Support Files/Pods-Stay-StayUITests/Pods-Stay-StayUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				A97E42F225B864560005EB37 /* FriendModel.swift */,
+				A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				A97E42EA25B862DE0005EB37 /* FriendService.swift */,
+				A9A80E8F25BE7D1500B22665 /* CalendarService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -495,8 +501,10 @@
 			files = (
 				A9383BE525A9DE0D00F803D2 /* HomeVC.swift in Sources */,
 				A97E42EB25B862DE0005EB37 /* FriendService.swift in Sources */,
+				A9A80E8B25BE7C8C00B22665 /* CalendarModel.swift in Sources */,
 				A97E42F325B864560005EB37 /* FriendModel.swift in Sources */,
 				A97B5CC425AF0A6A001932FD /* CalendarCell.swift in Sources */,
+				A9A80E9025BE7D1500B22665 /* CalendarService.swift in Sources */,
 				A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */,
 				A97E42FC25B866190005EB37 /* Config.swift in Sources */,
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
