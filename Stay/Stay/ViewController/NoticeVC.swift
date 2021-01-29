@@ -18,6 +18,7 @@ class NoticeVC: UIViewController {
         noticeTableView.dataSource = self
         noticeTableView.estimatedRowHeight = 80
         noticeTableView.rowHeight = UITableView.automaticDimension
+        noticeTableView.tableFooterView = UIView()
         
         backButton.isUserInteractionEnabled = true
     }
