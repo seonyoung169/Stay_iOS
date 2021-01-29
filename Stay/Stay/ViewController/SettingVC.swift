@@ -46,13 +46,12 @@ class SettingVC: UIViewController {
     
     @objc func tapNotice(sender : UIGestureRecognizer) {
         print("tap Notice")
-        guard let vc = self.storyboard?.instantiateViewController(identifier: "NoticeVC") else{
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "NoticeVC") else {
             print("NoticeVC nil")
             return
         }
-
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
-
     
 }
