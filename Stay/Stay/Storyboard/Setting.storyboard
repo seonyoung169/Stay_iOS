@@ -732,16 +732,38 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="870-2N-NjC">
                                 <rect key="frame" x="20" y="306.5" width="374" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경기 하남시 덕풍동 825-1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n87-Yj-xyB">
+                                        <rect key="frame" x="12" y="9.5" width="350" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="n87-Yj-xyB" firstAttribute="centerY" secondItem="870-2N-NjC" secondAttribute="centerY" id="4ab-dU-yWP"/>
                                     <constraint firstAttribute="height" constant="36" id="XzC-5d-iAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="n87-Yj-xyB" secondAttribute="trailing" constant="12" id="ZNZ-co-zVs"/>
+                                    <constraint firstItem="n87-Yj-xyB" firstAttribute="leading" secondItem="870-2N-NjC" secondAttribute="leading" constant="12" id="wqI-a1-bVL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6W-oS-6zN">
                                 <rect key="frame" x="20" y="372" width="374" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 중구 세종대로9길 20 신한은행 본점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBQ-y8-G1E">
+                                        <rect key="frame" x="12" y="9.5" width="350" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="3me-TT-j3g"/>
+                                    <constraint firstAttribute="trailing" secondItem="MBQ-y8-G1E" secondAttribute="trailing" constant="12" id="7N0-hK-J8K"/>
+                                    <constraint firstItem="MBQ-y8-G1E" firstAttribute="leading" secondItem="G6W-oS-6zN" secondAttribute="leading" constant="12" id="yDq-P2-jjk"/>
+                                    <constraint firstItem="MBQ-y8-G1E" firstAttribute="centerY" secondItem="G6W-oS-6zN" secondAttribute="centerY" id="zgL-bd-lzl"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8V-dn-Jwn">
@@ -766,21 +788,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPh-sl-mjc">
                                 <rect key="frame" x="20" y="481.5" width="374" height="36"/>
                                 <subviews>
-                                    <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="주소를 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VQb-gC-Y0h">
-                                        <rect key="frame" x="5" y="0.0" width="364" height="36"/>
-                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsX-W6-Q6a">
+                                        <rect key="frame" x="12" y="9.5" width="117" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="VQb-gC-Y0h" firstAttribute="leading" secondItem="cPh-sl-mjc" secondAttribute="leading" constant="5" id="OSu-ja-fVP"/>
+                                    <constraint firstItem="DsX-W6-Q6a" firstAttribute="centerY" secondItem="cPh-sl-mjc" secondAttribute="centerY" id="AIE-l5-Tng"/>
                                     <constraint firstAttribute="height" constant="36" id="PeR-3L-wj3"/>
-                                    <constraint firstAttribute="bottom" secondItem="VQb-gC-Y0h" secondAttribute="bottom" id="UaQ-2Z-jR4"/>
-                                    <constraint firstAttribute="trailing" secondItem="VQb-gC-Y0h" secondAttribute="trailing" constant="5" id="hkb-qh-hu8"/>
-                                    <constraint firstItem="VQb-gC-Y0h" firstAttribute="top" secondItem="cPh-sl-mjc" secondAttribute="top" id="jCl-si-OD6"/>
+                                    <constraint firstItem="DsX-W6-Q6a" firstAttribute="leading" secondItem="cPh-sl-mjc" secondAttribute="leading" constant="12" id="uBe-Yi-w1Q"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -817,6 +836,16 @@
                             <constraint firstItem="cun-Pg-hpf" firstAttribute="trailing" secondItem="Whp-07-L6F" secondAttribute="trailing" id="yUu-h9-Pi3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="homeAddressArea" destination="870-2N-NjC" id="nKe-DJ-v7c"/>
+                        <outlet property="homeAddressLabel" destination="n87-Yj-xyB" id="6ls-OS-1Zz"/>
+                        <outlet property="nameLabel" destination="5HX-co-Npv" id="Ape-8k-9hh"/>
+                        <outlet property="profileImageView" destination="adM-xo-ylE" id="rSv-Pa-DuX"/>
+                        <outlet property="theOtherAdressArea" destination="cPh-sl-mjc" id="Thk-6b-vGP"/>
+                        <outlet property="theOtherClassArea" destination="V8V-dn-Jwn" id="Ez9-J2-ksT"/>
+                        <outlet property="workAddressArea" destination="G6W-oS-6zN" id="wd0-k4-F0y"/>
+                        <outlet property="workAddressLabel" destination="MBQ-y8-G1E" id="uWd-QA-Qap"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qi6-5f-J6n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
