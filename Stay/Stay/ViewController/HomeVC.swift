@@ -24,12 +24,45 @@ class HomeVC: UIViewController {
     private let message = UILabel()
     private let exception = UILabel()
     
+    var homeData : HomeData! {
+        didSet {self.setCircleAndLabelOnView(record: homeData.currentRecord)}
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCircleAndLabelOnView()
+        getDataFromServer()
         //setCalendarFriendBar()
         setTapGesture()
         setKakaoShareBtn()
+    }
+    
+    // MARK : Get Data from Server
+    func getDataFromServer() {
+        HomeService.shared.getHomeData() { result in
+            switch result {
+            case .success(let successData) :
+                print("SUCCESS : ", successData)
+                self.homeData = successData.data
+                print(self.homeData)
+                self.setDataToView()
+            case .failure(let failureData) :
+                print("FAILURE : ", failureData)
+                
+            }
+        }
+    }
+    
+    func setDataToView() {
+        self.confirmedCountLabel.text = "\(self.homeData.corona.decideCnt)명"
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M"
+        let month = formatter.string(from: Date())
+        formatter.dateFormat = "d"
+        let day = formatter.string(from: Date())
+        
+        self.standardDateLabel.text = "(\(month)/\(day)) 10시 기준"
+        self.stageLabel.text = "\(self.homeData.corona.distancingNum) 단계"
     }
     
     // MARK : Tap Gesture
@@ -87,7 +120,7 @@ class HomeVC: UIViewController {
     }
     
     // MARK : 동그라미와 그 안, 아래 라벨 코드로 동적 적용
-    func setCircleAndLabelOnView() {
+    func setCircleAndLabelOnView(record : Int) {
         let diameter = 180
         let circleVerticalLocation = self.view.frame.height * 80 / 740
         
@@ -105,7 +138,7 @@ class HomeVC: UIViewController {
         circleMessage.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         circleMessage.textAlignment = .center
         
-        let attributedString = NSMutableAttributedString(string: "연속으로 5 일\n거리두기 중 이에요!")
+        let attributedString = NSMutableAttributedString(string: "연속으로 \(record) 일\n거리두기 중 이에요!")
         let bigAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 66, weight: .medium)]
         let smallAttrinbutes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)]
         attributedString.addAttributes(bigAttributes, range: _NSRange(location: 5, length: 1))
