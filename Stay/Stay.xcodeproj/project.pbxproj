@@ -24,6 +24,8 @@
 		A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */; };
 		A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */; };
 		A97B5CC425AF0A6A001932FD /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B5CC325AF0A6A001932FD /* CalendarCell.swift */; };
+		A97CD3B425C522BE009D0614 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97CD3B325C522BE009D0614 /* HomeModel.swift */; };
+		A97CD3B925C52346009D0614 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97CD3B825C52346009D0614 /* HomeService.swift */; };
 		A97E429725B1C90B0005EB37 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97E429625B1C90B0005EB37 /* Setting.storyboard */; };
 		A97E429C25B1CA8E0005EB37 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E429B25B1CA8E0005EB37 /* SettingVC.swift */; };
 		A97E42A425B5AB550005EB37 /* MyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42A325B5AB550005EB37 /* MyInfoVC.swift */; };
@@ -77,6 +79,8 @@
 		A9383C3C25AB2B0E00F803D2 /* FriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendVC.swift; sourceTree = "<group>"; };
 		A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		A97B5CC325AF0A6A001932FD /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		A97CD3B325C522BE009D0614 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		A97CD3B825C52346009D0614 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		A97E429625B1C90B0005EB37 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		A97E429B25B1CA8E0005EB37 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		A97E42A325B5AB550005EB37 /* MyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoVC.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			children = (
 				A97E42F225B864560005EB37 /* FriendModel.swift */,
 				A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */,
+				A97CD3B325C522BE009D0614 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			children = (
 				A97E42EA25B862DE0005EB37 /* FriendService.swift */,
 				A9A80E8F25BE7D1500B22665 /* CalendarService.swift */,
+				A97CD3B825C52346009D0614 /* HomeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -505,8 +511,10 @@
 				A97E42F325B864560005EB37 /* FriendModel.swift in Sources */,
 				A97B5CC425AF0A6A001932FD /* CalendarCell.swift in Sources */,
 				A9A80E9025BE7D1500B22665 /* CalendarService.swift in Sources */,
+				A97CD3B925C52346009D0614 /* HomeService.swift in Sources */,
 				A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */,
 				A97E42FC25B866190005EB37 /* Config.swift in Sources */,
+				A97CD3B425C522BE009D0614 /* HomeModel.swift in Sources */,
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
 				A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */,
 				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
@@ -690,6 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,6 +718,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
