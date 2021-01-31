@@ -55,9 +55,9 @@
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-3G-V4V">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icRightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="SE8-3G-V4V">
                                         <rect key="frame" x="386" y="16" width="8.5" height="16"/>
-                                        <color key="backgroundColor" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="PnH-BQ-cnB"/>
                                             <constraint firstAttribute="width" constant="8.5999999999999996" id="u71-0C-q5u"/>
@@ -82,9 +82,9 @@
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DaI-g7-plI">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icRightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="DaI-g7-plI">
                                         <rect key="frame" x="386" y="16" width="8.5" height="16"/>
-                                        <color key="backgroundColor" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="8.5999999999999996" id="P0n-2d-2qM"/>
                                             <constraint firstAttribute="height" constant="16" id="QiH-bs-XEA"/>
@@ -138,9 +138,9 @@
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pba-3p-cDs">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icRightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="pba-3p-cDs">
                                         <rect key="frame" x="386" y="16" width="8.5" height="16"/>
-                                        <color key="backgroundColor" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="3ce-9W-IEJ"/>
                                             <constraint firstAttribute="width" constant="8.5999999999999996" id="cSN-2p-pOJ"/>
@@ -165,9 +165,9 @@
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pqi-fx-IL1">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icRightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Pqi-fx-IL1">
                                         <rect key="frame" x="386" y="16" width="8.5" height="16"/>
-                                        <color key="backgroundColor" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="YRV-ab-MH6"/>
                                             <constraint firstAttribute="width" constant="8.5999999999999996" id="esD-H6-Xnr"/>
@@ -192,9 +192,9 @@
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rt0-YK-35G">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icRightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Rt0-YK-35G">
                                         <rect key="frame" x="386" y="16" width="8.5" height="16"/>
-                                        <color key="backgroundColor" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="7fl-tK-82O"/>
                                             <constraint firstAttribute="width" constant="8.5999999999999996" id="QtK-3f-GHk"/>
@@ -768,9 +768,21 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8V-dn-Jwn">
                                 <rect key="frame" x="20" y="437.5" width="374" height="36"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="장소 분류" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oxy-yE-5UM">
+                                        <rect key="frame" x="12" y="0.0" width="350" height="36"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="7EM-IL-8kj"/>
+                                    <constraint firstAttribute="bottom" secondItem="oxy-yE-5UM" secondAttribute="bottom" id="Md2-zV-Axo"/>
+                                    <constraint firstAttribute="trailing" secondItem="oxy-yE-5UM" secondAttribute="trailing" constant="12" id="SQg-r2-JhK"/>
+                                    <constraint firstItem="oxy-yE-5UM" firstAttribute="leading" secondItem="V8V-dn-Jwn" secondAttribute="leading" constant="12" id="cRf-2i-XIt"/>
+                                    <constraint firstItem="oxy-yE-5UM" firstAttribute="top" secondItem="V8V-dn-Jwn" secondAttribute="top" id="vxa-hH-MbX"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="직장 주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8e-7T-UIJ">
@@ -842,6 +854,7 @@
                         <outlet property="nameLabel" destination="5HX-co-Npv" id="Ape-8k-9hh"/>
                         <outlet property="profileImageView" destination="adM-xo-ylE" id="rSv-Pa-DuX"/>
                         <outlet property="theOtherAdressArea" destination="cPh-sl-mjc" id="Thk-6b-vGP"/>
+                        <outlet property="theOtherClass" destination="oxy-yE-5UM" id="IYt-lh-pmR"/>
                         <outlet property="theOtherClassArea" destination="V8V-dn-Jwn" id="Ez9-J2-ksT"/>
                         <outlet property="workAddressArea" destination="G6W-oS-6zN" id="wd0-k4-F0y"/>
                         <outlet property="workAddressLabel" destination="MBQ-y8-G1E" id="uWd-QA-Qap"/>
@@ -854,6 +867,7 @@
     </scenes>
     <resources>
         <image name="icBack" width="24" height="24"/>
+        <image name="icRightArrow" width="9" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

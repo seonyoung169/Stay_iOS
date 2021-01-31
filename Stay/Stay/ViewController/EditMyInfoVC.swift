@@ -15,18 +15,28 @@ class EditMyInfoVC: UIViewController {
     @IBOutlet weak var workAddressArea: UIView!
     @IBOutlet weak var workAddressLabel: UILabel!
     @IBOutlet weak var theOtherClassArea: UIView!
+    @IBOutlet weak var theOtherClass: UITextField!
     @IBOutlet weak var theOtherAdressArea: UIView!
     
+    private let picker = UIPickerView()
+    
+    let classes = ["학교", "독서실", "알바", "본가"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setImageView()
         setBackgroundBox()
         setTapGesture()
+        setClassPickerView()
     }
     
     func setImageView() {
         profileImageView.layer.cornerRadius = 24
+        
+        // MARK : 아래쪽 화살표 에셋 추가 필요
+        let downArrow = UIImageView(image: UIImage(named: "icRightArrow"))
+        self.theOtherClass.rightView = downArrow
+        self.theOtherClass.rightViewMode = .always
     }
     
     func setBackgroundBox() {
@@ -56,5 +66,46 @@ class EditMyInfoVC: UIViewController {
     @objc func tapAddress(sender : UIGestureRecognizer){
         print("address tap")
     }
+    
+    func setClassPickerView() {
+        picker.delegate = self
+        
+        theOtherClass.backgroundColor = .clear
+        theOtherClass.borderStyle = .none
+        theOtherClass.tintColor = .clear
+        theOtherClass.inputView = picker
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let button = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(selectClass))
+        
+        toolBar.setItems([flexibleSpace, button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        theOtherClass.inputAccessoryView = toolBar
+    }
+    
+    @objc func selectClass() {
+        self.theOtherClass.endEditing(true)
+    }
 
+}
+
+extension EditMyInfoVC : UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.classes.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.classes[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        theOtherClass.text = classes[row]
+    }
 }
