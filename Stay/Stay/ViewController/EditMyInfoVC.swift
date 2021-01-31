@@ -17,6 +17,7 @@ class EditMyInfoVC: UIViewController {
     @IBOutlet weak var theOtherClassArea: UIView!
     @IBOutlet weak var theOtherClass: UITextField!
     @IBOutlet weak var theOtherAdressArea: UIView!
+    @IBOutlet weak var assignArea: UIView!
     
     private let picker = UIPickerView()
     
@@ -32,6 +33,7 @@ class EditMyInfoVC: UIViewController {
     
     func setImageView() {
         profileImageView.layer.cornerRadius = 24
+        assignArea.layer.cornerRadius = 10
         
         // MARK : 아래쪽 화살표 에셋 추가 필요
         let downArrow = UIImageView(image: UIImage(named: "icRightArrow"))
