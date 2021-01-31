@@ -15,6 +15,8 @@ class MyInfoVC: UIViewController {
     @IBOutlet weak var homeAddressLabel: UIView!
     @IBOutlet weak var workAddressLabel: UIView!
     @IBOutlet weak var theOther: UILabel!
+    @IBOutlet weak var editMyInfoButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +35,12 @@ class MyInfoVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tapEdit(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "EditMyInfoVC") else {
+            print("get VC nil")
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
 
 }

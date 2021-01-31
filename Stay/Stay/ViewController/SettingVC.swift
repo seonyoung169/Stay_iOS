@@ -29,36 +29,29 @@ class SettingVC: UIViewController {
     }
     
     func setTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target : self, action : #selector(tapArea(sender:)))
-        self.myInfoArea.addGestureRecognizer(tapGesture)
-//        self.noticeArea.addGestureRecognizer(tapGesture)
-//        self.noticeArea.addGestureRecognizer(tapGesture)
-//        self.locationAgreeArea.addGestureRecognizer(tapGesture)
-//        self.logoutArea.addGestureRecognizer(tapGesture)
-//        self.withdrawArea.addGestureRecognizer(tapGesture)
+        let myInfoTapGesture = UITapGestureRecognizer(target : self, action : #selector(tapMyInfo(sender:)))
+        self.myInfoArea.addGestureRecognizer(myInfoTapGesture)
         
+        let noticeTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapNotice(sender:)))
+        self.noticeArea.addGestureRecognizer(noticeTapGesture)
     }
-    @objc func tapArea(sender : UIGestureRecognizer){
-        print(sender.view?.tag)
-        
-        guard let tag = sender.view?.tag else {
-            print("view's tag nil")
+    
+    @objc func tapMyInfo(sender : UIGestureRecognizer){
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyInfoVC") else {
+            print("MyInfoVC nil")
             return
         }
-        
-        switch tag {
-        case 1:
-            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyInfoVC") else {
-                print("MyInfoVC nil")
-                return
-            }
-            self.navigationController?.pushViewController(vc, animated: true)
-        default:
-            print("default")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func tapNotice(sender : UIGestureRecognizer) {
+        print("tap Notice")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "NoticeVC") else {
+            print("NoticeVC nil")
+            return
         }
-        
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
-
     
 }
