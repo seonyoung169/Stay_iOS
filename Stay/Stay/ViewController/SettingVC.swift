@@ -34,6 +34,9 @@ class SettingVC: UIViewController {
         
         let noticeTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapNotice(sender:)))
         self.noticeArea.addGestureRecognizer(noticeTapGesture)
+        
+        let locationAgreeTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapLocationAgree(sender:)))
+        self.locationAgreeArea.addGestureRecognizer(locationAgreeTapGesture)
     }
     
     @objc func tapMyInfo(sender : UIGestureRecognizer){
@@ -51,7 +54,15 @@ class SettingVC: UIViewController {
             return
         }
         self.navigationController?.pushViewController(vc, animated: true)
-        
+    }
+    
+    @objc func tapLocationAgree(sender : UIGestureRecognizer) {
+        print("tap LocationAgree")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "LocationAgreeVC") else {
+            print("LocationAgreeVC nil")
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

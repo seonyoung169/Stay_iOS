@@ -636,6 +636,100 @@
             </objects>
             <point key="canvasLocation" x="450.72463768115944" y="675"/>
         </scene>
+        <!--LocationAgreeVC-->
+        <scene sceneID="mNc-54-oYp">
+            <objects>
+                <viewController storyboardIdentifier="LocationAgreeVC" title="LocationAgreeVC" id="lh6-Co-a6z" customClass="LocationAgreeVC" customModule="Stay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0md-Q6-Rw1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dig-bz-qNm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBack" translatesAutoresizingMaskIntoConstraints="NO" id="hi6-2o-1vS">
+                                        <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="1WD-5d-AnT"/>
+                                            <constraint firstAttribute="height" constant="24" id="c12-7D-bYq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="NoC-H3-jwp" appends="YES" id="YlU-CS-aZm"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위치 서비스 수집 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32z-ob-Opi">
+                                        <rect key="frame" x="147" y="15.5" width="120" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="2sk-IF-iaV"/>
+                                    <constraint firstItem="hi6-2o-1vS" firstAttribute="centerY" secondItem="dig-bz-qNm" secondAttribute="centerY" id="6L6-NX-mZq"/>
+                                    <constraint firstItem="32z-ob-Opi" firstAttribute="centerY" secondItem="dig-bz-qNm" secondAttribute="centerY" id="HQD-Gh-9Gs"/>
+                                    <constraint firstItem="hi6-2o-1vS" firstAttribute="leading" secondItem="dig-bz-qNm" secondAttribute="leading" constant="12" id="sBZ-lA-a2W"/>
+                                    <constraint firstItem="32z-ob-Opi" firstAttribute="centerX" secondItem="dig-bz-qNm" secondAttribute="centerX" id="vjE-3L-OxY"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt3-af-aIv">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aml-xQ-Esr">
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="770"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3H-Op-4Ri">
+                                                <rect key="frame" x="20" y="16" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="a3H-Op-4Ri" firstAttribute="leading" secondItem="Aml-xQ-Esr" secondAttribute="leading" constant="20" id="OwA-OO-Ver"/>
+                                            <constraint firstItem="a3H-Op-4Ri" firstAttribute="top" secondItem="Aml-xQ-Esr" secondAttribute="top" constant="16" id="nMc-3W-2yh"/>
+                                            <constraint firstAttribute="trailing" secondItem="a3H-Op-4Ri" secondAttribute="trailing" constant="344.5" id="pgX-BJ-Cf4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Aml-xQ-Esr" firstAttribute="leading" secondItem="Qt3-af-aIv" secondAttribute="leading" id="Oxs-5P-88J"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aml-xQ-Esr" secondAttribute="trailing" id="dr6-5M-ss7"/>
+                                    <constraint firstItem="Aml-xQ-Esr" firstAttribute="height" secondItem="Qt3-af-aIv" secondAttribute="height" id="eto-Ru-rOo"/>
+                                    <constraint firstItem="Aml-xQ-Esr" firstAttribute="top" secondItem="Qt3-af-aIv" secondAttribute="top" id="hNh-u0-cs0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aml-xQ-Esr" secondAttribute="bottom" id="oLF-Qu-iIE"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rLY-hW-1tm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dig-bz-qNm" firstAttribute="top" secondItem="rLY-hW-1tm" secondAttribute="top" id="7uk-vl-p6l"/>
+                            <constraint firstItem="dig-bz-qNm" firstAttribute="leading" secondItem="rLY-hW-1tm" secondAttribute="leading" id="9GU-hc-e57"/>
+                            <constraint firstItem="Qt3-af-aIv" firstAttribute="top" secondItem="dig-bz-qNm" secondAttribute="bottom" id="Jvg-J7-NcV"/>
+                            <constraint firstItem="Qt3-af-aIv" firstAttribute="leading" secondItem="rLY-hW-1tm" secondAttribute="leading" id="ZQx-su-2ry"/>
+                            <constraint firstItem="rLY-hW-1tm" firstAttribute="trailing" secondItem="dig-bz-qNm" secondAttribute="trailing" id="aCD-fu-L1e"/>
+                            <constraint firstItem="Qt3-af-aIv" firstAttribute="trailing" secondItem="rLY-hW-1tm" secondAttribute="trailing" id="iVg-9K-h6B"/>
+                            <constraint firstItem="Qt3-af-aIv" firstAttribute="bottom" secondItem="rLY-hW-1tm" secondAttribute="bottom" id="zwx-Wg-MGh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="hi6-2o-1vS" id="PB3-y9-ZAZ"/>
+                        <outlet property="contentLabel" destination="a3H-Op-4Ri" id="BCe-E5-T1u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUy-Bl-eTE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NoC-H3-jwp">
+                    <connections>
+                        <action selector="tapBackButton:" destination="lh6-Co-a6z" id="ymH-k5-s1o"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1240.5797101449277" y="675"/>
+        </scene>
         <!--EditMyInfoVC-->
         <scene sceneID="DuR-gs-Zft">
             <objects>
