@@ -8,6 +8,8 @@
 import UIKit
 
 class EditMyInfoVC: UIViewController {
+    
+    @IBOutlet weak var backButton: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var homeAddressArea: UIView!
@@ -17,6 +19,7 @@ class EditMyInfoVC: UIViewController {
     @IBOutlet weak var theOtherClassArea: UIView!
     @IBOutlet weak var theOtherClass: UITextField!
     @IBOutlet weak var theOtherAdressArea: UIView!
+    
     @IBOutlet weak var assignArea: UIView!
     
     private let picker = UIPickerView()

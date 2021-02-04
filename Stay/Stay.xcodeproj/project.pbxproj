@@ -34,6 +34,7 @@
 		A97E42EB25B862DE0005EB37 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42EA25B862DE0005EB37 /* FriendService.swift */; };
 		A97E42F325B864560005EB37 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42F225B864560005EB37 /* FriendModel.swift */; };
 		A97E42FC25B866190005EB37 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97E42FB25B866190005EB37 /* Config.swift */; };
+		A996DB2525CC1DA600EB03B3 /* AddressSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996DB2425CC1DA600EB03B3 /* AddressSearchVC.swift */; };
 		A9A80E8B25BE7C8C00B22665 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */; };
 		A9A80E9025BE7D1500B22665 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80E8F25BE7D1500B22665 /* CalendarService.swift */; };
 		A9A80EB325BEAB7200B22665 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80EB225BEAB7200B22665 /* NoticeTableViewCell.swift */; };
@@ -95,6 +96,7 @@
 		A97E42EA25B862DE0005EB37 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		A97E42F225B864560005EB37 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		A97E42FB25B866190005EB37 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A996DB2425CC1DA600EB03B3 /* AddressSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchVC.swift; sourceTree = "<group>"; };
 		A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		A9A80E8F25BE7D1500B22665 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		A9A80EB225BEAB7200B22665 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				A97CD39625C3B85E009D0614 /* EditMyInfoVC.swift */,
 				A97CD39E25C3BEFF009D0614 /* NoticeVC.swift */,
 				A9E6DA4325CA6477004D304F /* LocationAgreeVC.swift */,
+				A996DB2425CC1DA600EB03B3 /* AddressSearchVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */,
 				A97CD39725C3B85E009D0614 /* EditMyInfoVC.swift in Sources */,
 				A9A80EB325BEAB7200B22665 /* NoticeTableViewCell.swift in Sources */,
+				A996DB2525CC1DA600EB03B3 /* AddressSearchVC.swift in Sources */,
 				A9E6DA3125C6A254004D304F /* NoticeModel.swift in Sources */,
 				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
 				A9E6DA4425CA6477004D304F /* LocationAgreeVC.swift in Sources */,
