@@ -37,6 +37,7 @@ class EditMyInfoVC: UIViewController {
     func setImageView() {
         profileImageView.layer.cornerRadius = 24
         assignArea.layer.cornerRadius = 10
+        backButton.isUserInteractionEnabled = true
         
         // MARK : 아래쪽 화살표 에셋 추가 필요
         let downArrow = UIImageView(image: UIImage(named: "icRightArrow"))
@@ -62,6 +63,10 @@ class EditMyInfoVC: UIViewController {
         theOtherAdressArea.layer.borderColor = CGColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
     }
     
+    @IBAction func tapBackButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func setTapGesture() {
         let addressTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAddress(sender:)))
         
@@ -69,7 +74,11 @@ class EditMyInfoVC: UIViewController {
     }
     
     @objc func tapAddress(sender : UIGestureRecognizer){
-        print("address tap")
+        if let vc = self.storyboard?.instantiateViewController(identifier: "AddressSearchVC"){
+            self.present(vc, animated: true, completion: nil)
+        }else{
+            print("AddressSearchVC nil")
+        }
     }
     
     func setClassPickerView() {
