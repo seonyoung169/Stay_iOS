@@ -13,6 +13,8 @@ class AddressService {
     static let shared : AddressService = AddressService()
     
     func getAddressSearchResult(keyword : String, completionHandler : @escaping (Result<AddressResponse, Error>) -> Void){
+        print("getAddressSearchResult")
+        
         let url = "https://www.juso.go.kr/addrlink/addrLinkApi.do"
         
         let params : [String : Any] = [
@@ -32,15 +34,15 @@ class AddressService {
             switch dataResponse.result {
             case .success(let successResponse) :
                 print("response success")
-                
                 let decoder = JSONDecoder()
                 do {
                     let decodedData = try decoder.decode(AddressResponse.self, from: dataResponse.data!)
                     print("decoding success")
-                    print(decodedData)
+                    completionHandler(.success(decodedData))
                 }catch{
                     print("decoding fail")
                     print(error)
+                    completionHandler(.failure(error))
                 }
             
             case .failure(let failureResponse) :

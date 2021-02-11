@@ -15,21 +15,26 @@ class AddressResultVC: UIViewController {
     @IBOutlet weak var cancleTextField: UIImageView!
     @IBOutlet weak var addressResultTableView: UITableView!
     
+    var addressList : [AddressData]! {
+        didSet { self.addressResultTableView.reloadData() }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         setTapGesture()
-        getAddressData()
+        getAddressDataFromServer()
     }
     
-    func getAddressData(){
-        print("testtt")
+    func getAddressDataFromServer(){
+        print("getting func")
         AddressService.shared.getAddressSearchResult(keyword: "성북") { result in
             switch result {
             case .success(let successData) :
-                print(successData)
+                print("SUCCESS : ", successData)
+                self.addressList = successData.results.juso
             case .failure(let failureData) :
-                print(failureData)
+                print("FAILURE : ", failureData)
             }
             
         }
@@ -60,11 +65,20 @@ class AddressResultVC: UIViewController {
 
 extension AddressResultVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if let list = self.addressList {
+            return list.count
+        }else{
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddressResultTableViewCell") as! AddressResultTableViewCell
+        
+        if let list = self.addressList {
+            cell.newAddressLabel.text = list[indexPath.row].roadAddr
+            cell.oldAddressLabel.text = list[indexPath.row].jibunAddr
+        }
         
         return cell
     }
