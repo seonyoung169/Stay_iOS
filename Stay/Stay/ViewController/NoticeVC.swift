@@ -12,6 +12,10 @@ class NoticeVC: UIViewController {
     @IBOutlet weak var backButton: UIImageView!
     @IBOutlet weak var noticeTableView: UITableView!
     
+    var noticeList : [NoticeData]! {
+        didSet { self.noticeTableView.reloadData() }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         noticeTableView.delegate = self
@@ -21,7 +25,24 @@ class NoticeVC: UIViewController {
         noticeTableView.tableFooterView = UIView()
         
         backButton.isUserInteractionEnabled = true
+        
+        getDataFromServer()
     }
+    
+    // MARK : Getting Data from Server
+    func getDataFromServer() {
+        NoticeService.shared.getNoticeList() { result in
+            switch result {
+            case .success(let successData):
+                print("SUCCESS : ", successData)
+                self.noticeList = successData.data
+            case .failure(let failureData):
+                print("FAILURE : ", failureData)
+            }
+            
+        }
+    }
+    
     @IBAction func tapBackButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -29,13 +50,18 @@ class NoticeVC: UIViewController {
 
 extension NoticeVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if let list = self.noticeList {
+            return list.count
+        }else{
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoticeTableViewCell") as! NoticeTableViewCell
         
-        cell.titleLabel.text = "subwayjfewoaijflzklkzdnflksdahfoeiwhaoznlvm;ldkjfwoaiehfnlamnlksamldahfoeiwhaoznlvm;ldkjfwoadahfoeiwhaoznlvm;ldkjfwoa"
+        cell.titleLabel.text = self.noticeList[indexPath.row].title
+        cell.dateLabel.text = self.noticeList[indexPath.row].createdDate
         
         return cell
     }
