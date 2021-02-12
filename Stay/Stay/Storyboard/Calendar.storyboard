@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,6 +20,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBack" translatesAutoresizingMaskIntoConstraints="NO" id="RJE-7G-vH6">
                                         <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="0JN-97-CJX"/>
                                             <constraint firstAttribute="width" constant="24" id="Wg3-9h-p5F"/>
@@ -62,24 +62,46 @@
                                             <constraint firstItem="YJK-mt-OZ2" firstAttribute="leading" secondItem="eqo-4D-V7J" secondAttribute="leading" constant="24" id="bT0-Wr-aV9"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I5p-FV-5y3" customClass="FSCalendar">
+                                        <rect key="frame" x="12" y="63" width="390" height="336"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                                <color key="value" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="eqo-4D-V7J" firstAttribute="top" secondItem="E8z-hN-F9X" secondAttribute="top" id="0FH-kP-oTT"/>
                                     <constraint firstAttribute="trailing" secondItem="eqo-4D-V7J" secondAttribute="trailing" id="1O2-EI-UiO"/>
+                                    <constraint firstItem="I5p-FV-5y3" firstAttribute="leading" secondItem="E8z-hN-F9X" secondAttribute="leading" constant="12" id="N7o-Hp-s0y"/>
+                                    <constraint firstItem="I5p-FV-5y3" firstAttribute="top" secondItem="eqo-4D-V7J" secondAttribute="bottom" id="a5d-d6-hQu"/>
                                     <constraint firstAttribute="height" constant="399" id="fKQ-5w-NPO"/>
+                                    <constraint firstAttribute="bottom" secondItem="I5p-FV-5y3" secondAttribute="bottom" id="uhL-zL-2pd"/>
                                     <constraint firstItem="eqo-4D-V7J" firstAttribute="leading" secondItem="E8z-hN-F9X" secondAttribute="leading" id="v7H-mV-M5q"/>
+                                    <constraint firstAttribute="trailing" secondItem="I5p-FV-5y3" secondAttribute="trailing" constant="12" id="vR8-m6-VIq"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16e-BP-eDw">
-                                <rect key="frame" x="0.0" y="491" width="414" height="6"/>
+                                <rect key="frame" x="0.0" y="515" width="414" height="6"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="6" id="juA-yp-wbv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-lD-ODY">
-                                <rect key="frame" x="0.0" y="497" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="521" width="414" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCurrentRecord" translatesAutoresizingMaskIntoConstraints="NO" id="tLN-S9-2Bz">
                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
@@ -113,7 +135,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dzo-X6-zxf">
-                                <rect key="frame" x="0.0" y="547" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="571" width="414" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBestRecord" translatesAutoresizingMaskIntoConstraints="NO" id="Nha-VC-n0H">
                                         <rect key="frame" x="15" y="15" width="20" height="20"/>
@@ -155,7 +177,7 @@
                             <constraint firstItem="1MB-gv-ZLA" firstAttribute="trailing" secondItem="16e-BP-eDw" secondAttribute="trailing" id="GTr-BM-6YG"/>
                             <constraint firstItem="1MB-gv-ZLA" firstAttribute="trailing" secondItem="Llg-lD-ODY" secondAttribute="trailing" id="PEp-GI-SwQ"/>
                             <constraint firstItem="Llg-lD-ODY" firstAttribute="top" secondItem="16e-BP-eDw" secondAttribute="bottom" id="WOJ-nP-D9c"/>
-                            <constraint firstItem="16e-BP-eDw" firstAttribute="top" secondItem="E8z-hN-F9X" secondAttribute="bottom" id="WUP-nA-cB6"/>
+                            <constraint firstItem="16e-BP-eDw" firstAttribute="top" secondItem="E8z-hN-F9X" secondAttribute="bottom" constant="24" id="WUP-nA-cB6"/>
                             <constraint firstItem="1MB-gv-ZLA" firstAttribute="trailing" secondItem="Dzo-X6-zxf" secondAttribute="trailing" id="dgH-a7-oGp"/>
                             <constraint firstItem="E8z-hN-F9X" firstAttribute="top" secondItem="Shs-NA-vqu" secondAttribute="bottom" id="dp1-jG-5Pd"/>
                             <constraint firstItem="1MB-gv-ZLA" firstAttribute="trailing" secondItem="E8z-hN-F9X" secondAttribute="trailing" id="e6o-eq-hEn"/>
@@ -167,6 +189,13 @@
                             <constraint firstItem="1MB-gv-ZLA" firstAttribute="trailing" secondItem="Shs-NA-vqu" secondAttribute="trailing" id="xTd-2T-eBc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backBtn" destination="RJE-7G-vH6" id="Vpc-FJ-49S"/>
+                        <outlet property="bestCount" destination="7rj-Jf-co7" id="4tG-Gw-NpX"/>
+                        <outlet property="calendar" destination="I5p-FV-5y3" id="TXH-4S-o1v"/>
+                        <outlet property="currentCount" destination="iau-06-k5P" id="qFo-eK-TQO"/>
+                        <outlet property="yearAndMonth" destination="UF9-8w-pPN" id="FXV-FC-cbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bw-hZ-uq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,8 +206,5 @@
         <image name="icBack" width="24" height="24"/>
         <image name="icBestRecord" width="20" height="20"/>
         <image name="icCurrentRecord" width="20" height="20"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
