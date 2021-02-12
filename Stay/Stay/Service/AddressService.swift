@@ -13,7 +13,6 @@ class AddressService {
     static let shared : AddressService = AddressService()
     
     func getAddressSearchResult(keyword : String, completionHandler : @escaping (Result<AddressResponse, Error>) -> Void){
-        print("getAddressSearchResult")
         
         let url = "https://www.juso.go.kr/addrlink/addrLinkApi.do"
         

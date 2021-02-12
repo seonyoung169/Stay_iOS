@@ -15,6 +15,7 @@ class AddressSearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("AddressSearchVC - viewDidLoad")
         setView()
         setTapGesture()
     }
@@ -29,6 +30,7 @@ class AddressSearchVC: UIViewController {
     }
     
     func setView() {
+        print("AddressSearchVC - setView")
         writeAddressField.delegate = self
         
         closeButton.isUserInteractionEnabled = true
@@ -42,14 +44,26 @@ class AddressSearchVC: UIViewController {
         writeAddressField.tintColor = .clear
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? AddressResultVC else { return }
+        
+        if let keyword = self.writeAddressField.text {
+            resultVC.keyword = keyword
+        }
+    }
+    
 
 }
 
 extension AddressSearchVC : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let vc = self.storyboard?.instantiateViewController(identifier: "AddressResultVC"){
-            self.present(vc, animated: true, completion: nil)
-        }
+        performSegue(withIdentifier: "showAddressResult", sender: nil)
         return true
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        writeAddressField.placeholder = ""
+        writeAddressField.clearsOnBeginEditing = true
+    }
+    
 }

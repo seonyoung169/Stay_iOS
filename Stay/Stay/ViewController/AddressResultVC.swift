@@ -15,6 +15,8 @@ class AddressResultVC: UIViewController {
     @IBOutlet weak var cancleTextField: UIImageView!
     @IBOutlet weak var addressResultTableView: UITableView!
     
+    var keyword : String?
+    
     var addressList : [AddressData]! {
         didSet { self.addressResultTableView.reloadData() }
     }
@@ -27,16 +29,18 @@ class AddressResultVC: UIViewController {
     }
     
     func getAddressDataFromServer(){
-        print("getting func")
-        AddressService.shared.getAddressSearchResult(keyword: "성북") { result in
-            switch result {
-            case .success(let successData) :
-                print("SUCCESS : ", successData)
-                self.addressList = successData.results.juso
-            case .failure(let failureData) :
-                print("FAILURE : ", failureData)
+        
+        if let word = self.keyword {
+            AddressService.shared.getAddressSearchResult(keyword: word) { result in
+                switch result {
+                case .success(let successData) :
+                    print("SUCCESS : ", successData)
+                    self.addressList = successData.results.juso
+                case .failure(let failureData) :
+                    print("FAILURE : ", failureData)
+                }
+                
             }
-            
         }
     }
     
@@ -47,6 +51,7 @@ class AddressResultVC: UIViewController {
         addressResultTableView.dataSource = self
         addressResultTableView.tableFooterView = UIView()
         
+        writeAddressField.delegate = self
         writeAddressField.backgroundColor = .clear
         writeAddressField.borderStyle = .none
         writeAddressField.tintColor = .clear
@@ -86,5 +91,18 @@ extension AddressResultVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 67
     }
+}
+
+extension AddressResultVC : UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        writeAddressField.placeholder = ""
+        writeAddressField.clearsOnBeginEditing = true
+    }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.keyword = writeAddressField.text
+        getAddressDataFromServer()
+        
+        return true
+    }
 }
