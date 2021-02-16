@@ -41,12 +41,13 @@ class AddressSearchVC: UIViewController {
         
         writeAddressField.backgroundColor = .clear
         writeAddressField.borderStyle = .none
-        writeAddressField.tintColor = .clear
+        writeAddressField.tintColor = .black
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultVC = segue.destination as? AddressResultVC else { return }
-        
+
         if let keyword = self.writeAddressField.text {
             resultVC.keyword = keyword
         }
@@ -58,6 +59,7 @@ class AddressSearchVC: UIViewController {
 extension AddressSearchVC : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         performSegue(withIdentifier: "showAddressResult", sender: nil)
+        
         return true
     }
     

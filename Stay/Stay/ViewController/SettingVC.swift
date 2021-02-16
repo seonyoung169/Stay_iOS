@@ -8,24 +8,32 @@
 import UIKit
 
 class SettingVC: UIViewController {
-    
+
     @IBOutlet weak var backButton: UIImageView!
     @IBOutlet weak var myInfoArea: UIView!
     @IBOutlet weak var noticeArea: UIView!
-    @IBOutlet weak var friendOpenSwitch: UISwitch!
     @IBOutlet weak var locationAgreeArea: UIView!
     @IBOutlet weak var logoutArea: UIView!
     @IBOutlet weak var withdrawArea: UIView!
     @IBOutlet weak var appVersionLabel: UILabel!
     
+    @IBOutlet weak var friendOpenSwitch: SwitchButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backButton.isUserInteractionEnabled = true
+        setView()
         setTapGesture()
+        
     }
     
     @IBAction func tapBackButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func setView() {
+        friendOpenSwitch.delegate = self
+        self.backButton.isUserInteractionEnabled = true
     }
     
     func setTapGesture() {
@@ -64,5 +72,14 @@ class SettingVC: UIViewController {
         }
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+}
+
+extension SettingVC : SwieeftSwitchButtonDelegate{
+    func isOnValueChange(isOn: Bool) {
+        if self.friendOpenSwitch.isOn{
+            
+        }else{
+            
+        }
+    }
 }

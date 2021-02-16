@@ -54,7 +54,7 @@ class AddressResultVC: UIViewController {
         writeAddressField.delegate = self
         writeAddressField.backgroundColor = .clear
         writeAddressField.borderStyle = .none
-        writeAddressField.tintColor = .clear
+        writeAddressField.tintColor = .black
     }
     
     func setTapGesture() {
@@ -91,6 +91,17 @@ extension AddressResultVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 67
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("touch")
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        for controller in self.navigationController?.viewControllers as Array{
+//            if controller.isKind(of: EditMyInfoVC.self){
+//                self.navigationController!.popToViewController(controller, animated: false)
+//                break
+//            }
+//        }
+    }
 }
 
 extension AddressResultVC : UITextFieldDelegate {
@@ -104,5 +115,20 @@ extension AddressResultVC : UITextFieldDelegate {
         getAddressDataFromServer()
         
         return true
+    }
+}
+
+extension UINavigationController{
+    func popToViewController(ofClass : AnyClass, animated : Bool = true) {
+        if let vc = viewControllers.filter({$0.isKind(of: ofClass)}).last{
+            popToViewController(vc, animated: animated)
+        }
+    }
+    
+    func popViewControllers(viewsToPop : Int, animated : Bool = true) {
+        if viewControllers.count > viewsToPop {
+            let vc = viewControllers[viewControllers.count-viewsToPop-1]
+            popToViewController(vc, animated: animated)
+        }
     }
 }
