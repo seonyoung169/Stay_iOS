@@ -67,6 +67,10 @@ class EditMyInfoVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func unwindToMyInfoVC(segue : UIStoryboardSegue){
+        performSegue(withIdentifier: "unwindToMyInfoVC", sender: self)
+    }
+    
     func setTapGesture() {
         let addressTapGesture = UITapGestureRecognizer(target: self, action: #selector(tapAddress(sender:)))
         
@@ -75,10 +79,18 @@ class EditMyInfoVC: UIViewController {
     
     @objc func tapAddress(sender : UIGestureRecognizer){
         if let vc = self.storyboard?.instantiateViewController(identifier: "AddressSearchVC"){
-            self.present(vc, animated: true, completion: nil)
+            let navigationController = UINavigationController()
+            navigationController.setNavigationBarHidden(true, animated: false)
+            
+            navigationController.setViewControllers([vc], animated: true)
+            present(navigationController, animated: true, completion: nil)
+            
+//            self.present(vc, animated: true, completion: nil)
         }else{
             print("AddressSearchVC nil")
         }
+//        let rootVC = AddressSearchVC()
+        
     }
     
     func setClassPickerView() {

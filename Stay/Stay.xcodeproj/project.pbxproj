@@ -25,6 +25,11 @@
 		A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */; };
 		A9488DF825D4046100F213BE /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488DF725D4046100F213BE /* AddressModel.swift */; };
 		A9488DFD25D40FC300F213BE /* AddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488DFC25D40FC300F213BE /* AddressService.swift */; };
+		A9488E2F25D63A1A00F213BE /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488E2E25D63A1A00F213BE /* SwitchButton.swift */; };
+		A9488E3425D640B400F213BE /* SwitchButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488E3325D640B400F213BE /* SwitchButtonDelegate.swift */; };
+		A9488E3925D6526800F213BE /* MyPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488E3825D6526800F213BE /* MyPlaceTableViewCell.swift */; };
+		A9488E3E25D6545C00F213BE /* MyPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488E3D25D6545C00F213BE /* MyPlaceModel.swift */; };
+		A9488E4325D654CC00F213BE /* MyPlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9488E4225D654CC00F213BE /* MyPlaceService.swift */; };
 		A97B5CC425AF0A6A001932FD /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97B5CC325AF0A6A001932FD /* CalendarCell.swift */; };
 		A97CD39725C3B85E009D0614 /* EditMyInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97CD39625C3B85E009D0614 /* EditMyInfoVC.swift */; };
 		A97CD39F25C3BEFF009D0614 /* NoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97CD39E25C3BEFF009D0614 /* NoticeVC.swift */; };
@@ -91,6 +96,11 @@
 		A9383C4825AC059300F803D2 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		A9488DF725D4046100F213BE /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		A9488DFC25D40FC300F213BE /* AddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressService.swift; sourceTree = "<group>"; };
+		A9488E2E25D63A1A00F213BE /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		A9488E3325D640B400F213BE /* SwitchButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButtonDelegate.swift; sourceTree = "<group>"; };
+		A9488E3825D6526800F213BE /* MyPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		A9488E3D25D6545C00F213BE /* MyPlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceModel.swift; sourceTree = "<group>"; };
+		A9488E4225D654CC00F213BE /* MyPlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceService.swift; sourceTree = "<group>"; };
 		A97B5CC325AF0A6A001932FD /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		A97CD39625C3B85E009D0614 /* EditMyInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMyInfoVC.swift; sourceTree = "<group>"; };
 		A97CD39E25C3BEFF009D0614 /* NoticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeVC.swift; sourceTree = "<group>"; };
@@ -260,6 +270,9 @@
 				A97B5CC325AF0A6A001932FD /* CalendarCell.swift */,
 				A9A80EB225BEAB7200B22665 /* NoticeTableViewCell.swift */,
 				A996DB2E25CFB92C00EB03B3 /* AddressResultTableViewCell.swift */,
+				A9488E2E25D63A1A00F213BE /* SwitchButton.swift */,
+				A9488E3325D640B400F213BE /* SwitchButtonDelegate.swift */,
+				A9488E3825D6526800F213BE /* MyPlaceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +285,7 @@
 				A97CD3B325C522BE009D0614 /* HomeModel.swift */,
 				A9E6DA3025C6A254004D304F /* NoticeModel.swift */,
 				A9488DF725D4046100F213BE /* AddressModel.swift */,
+				A9488E3D25D6545C00F213BE /* MyPlaceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +298,7 @@
 				A97CD3B825C52346009D0614 /* HomeService.swift */,
 				A9E6DA3525C6A2B4004D304F /* NoticeService.swift */,
 				A9488DFC25D40FC300F213BE /* AddressService.swift */,
+				A9488E4225D654CC00F213BE /* MyPlaceService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -549,18 +564,23 @@
 				A9383C3D25AB2B0E00F803D2 /* FriendVC.swift in Sources */,
 				A97E42FC25B866190005EB37 /* Config.swift in Sources */,
 				A9E6DA3625C6A2B4004D304F /* NoticeService.swift in Sources */,
+				A9488E4325D654CC00F213BE /* MyPlaceService.swift in Sources */,
 				A97CD3B425C522BE009D0614 /* HomeModel.swift in Sources */,
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
+				A9488E3925D6526800F213BE /* MyPlaceTableViewCell.swift in Sources */,
 				A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */,
+				A9488E3425D640B400F213BE /* SwitchButtonDelegate.swift in Sources */,
 				A97CD39725C3B85E009D0614 /* EditMyInfoVC.swift in Sources */,
 				A9A80EB325BEAB7200B22665 /* NoticeTableViewCell.swift in Sources */,
 				A996DB2525CC1DA600EB03B3 /* AddressSearchVC.swift in Sources */,
 				A9E6DA3125C6A254004D304F /* NoticeModel.swift in Sources */,
 				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
 				A9E6DA4425CA6477004D304F /* LocationAgreeVC.swift in Sources */,
+				A9488E3E25D6545C00F213BE /* MyPlaceModel.swift in Sources */,
 				A97E42A425B5AB550005EB37 /* MyInfoVC.swift in Sources */,
 				A97E429C25B1CA8E0005EB37 /* SettingVC.swift in Sources */,
 				A9488DFD25D40FC300F213BE /* AddressService.swift in Sources */,
+				A9488E2F25D63A1A00F213BE /* SwitchButton.swift in Sources */,
 				A996DB2A25CFB89300EB03B3 /* AddressResultVC.swift in Sources */,
 				A9488DF825D4046100F213BE /* AddressModel.swift in Sources */,
 				A9383BE325A9DE0D00F803D2 /* SceneDelegate.swift in Sources */,
