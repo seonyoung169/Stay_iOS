@@ -20,6 +20,7 @@ class EditMyInfoVC: UIViewController {
     @IBOutlet weak var theOtherClass: UITextField!
     @IBOutlet weak var theOtherAdressArea: UIView!
     
+    @IBOutlet weak var selectedAddressLabel: UILabel!
     @IBOutlet weak var assignArea: UIView!
     
     private let picker = UIPickerView()
@@ -28,10 +29,12 @@ class EditMyInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setImageView()
         setBackgroundBox()
         setTapGesture()
         setClassPickerView()
+        
     }
     
     func setImageView() {
@@ -78,18 +81,13 @@ class EditMyInfoVC: UIViewController {
     }
     
     @objc func tapAddress(sender : UIGestureRecognizer){
-        if let vc = self.storyboard?.instantiateViewController(identifier: "AddressSearchVC"){
-            let navigationController = UINavigationController()
-            navigationController.setNavigationBarHidden(true, animated: false)
+        if let vc = self.storyboard?.instantiateViewController(identifier: "AddressResultVC") as? AddressResultVC {
+            vc.delegate = self
+            present(vc, animated: true, completion: nil)
             
-            navigationController.setViewControllers([vc], animated: true)
-            present(navigationController, animated: true, completion: nil)
-            
-//            self.present(vc, animated: true, completion: nil)
         }else{
             print("AddressSearchVC nil")
         }
-//        let rootVC = AddressSearchVC()
         
     }
     
@@ -135,3 +133,15 @@ extension EditMyInfoVC : UITextFieldDelegate, UIPickerViewDelegate, UIPickerView
         theOtherClass.text = classes[row]
     }
 }
+
+extension EditMyInfoVC : SendDataDelegate{
+    func sendData(data: String) {
+        selectedAddressLabel.text = data
+        selectedAddressLabel.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+    }
+    
+    
+}
+
+
+

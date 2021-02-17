@@ -971,6 +971,7 @@
                         <outlet property="homeAddressLabel" destination="6DX-DR-uEs" id="Z2Z-r9-0eX"/>
                         <outlet property="nameLabel" destination="DRN-1l-3o6" id="i7D-fy-1FT"/>
                         <outlet property="profileImageView" destination="D56-bQ-sab" id="sKO-KM-8ai"/>
+                        <outlet property="selectedAddressLabel" destination="u8d-CT-Eff" id="7MY-7R-fJG"/>
                         <outlet property="theOtherAdressArea" destination="Zav-cR-oTF" id="QW1-v9-IIk"/>
                         <outlet property="theOtherClass" destination="YZ9-iT-D6c" id="eA2-53-gHb"/>
                         <outlet property="theOtherClassArea" destination="Imc-Lg-dfU" id="LGI-gm-Aly"/>

@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(data : String)
+}
+
 class AddressResultVC: UIViewController {
+    var delegate : SendDataDelegate?
 
     @IBOutlet weak var closeButton: UIImageView!
     @IBOutlet weak var writeAddressArea: UIView!
@@ -93,14 +98,10 @@ extension AddressResultVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("touch")
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        for controller in self.navigationController?.viewControllers as Array{
-//            if controller.isKind(of: EditMyInfoVC.self){
-//                self.navigationController!.popToViewController(controller, animated: false)
-//                break
-//            }
-//        }
+        if let list = self.addressList {
+            delegate?.sendData(data: list[indexPath.row].roadAddr)
+        }
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

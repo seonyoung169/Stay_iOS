@@ -15,7 +15,6 @@ class AddressSearchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("AddressSearchVC - viewDidLoad")
         setView()
         setTapGesture()
     }
@@ -30,7 +29,6 @@ class AddressSearchVC: UIViewController {
     }
     
     func setView() {
-        print("AddressSearchVC - setView")
         writeAddressField.delegate = self
         
         closeButton.isUserInteractionEnabled = true
