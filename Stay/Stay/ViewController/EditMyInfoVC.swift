@@ -69,6 +69,20 @@ class EditMyInfoVC: UIViewController {
     @IBAction func tapBackButton(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func tapAssignArea(_ sender: Any) {
+        
+        AddPlaceService.shared.addPlace () {
+            result in
+            switch result{
+            case .success(let successData):
+                print("SUCCESS : ", successData)
+                
+            case .failure(let failureData):
+                print("FAILURE : ", failureData)
+            }
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func unwindToMyInfoVC(segue : UIStoryboardSegue){
         performSegue(withIdentifier: "unwindToMyInfoVC", sender: self)
@@ -139,8 +153,6 @@ extension EditMyInfoVC : SendDataDelegate{
         selectedAddressLabel.text = data
         selectedAddressLabel.textColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
     }
-    
-    
 }
 
 

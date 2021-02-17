@@ -751,12 +751,16 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.38823529410000002" green="0.79215686269999996" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="WzV-rq-G5L" firstAttribute="centerX" secondItem="vCT-D3-Na1" secondAttribute="centerX" id="PiP-FV-QV9"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="TXq-cJ-l4R"/>
                                     <constraint firstItem="WzV-rq-G5L" firstAttribute="centerY" secondItem="vCT-D3-Na1" secondAttribute="centerY" id="XXp-8y-DCz"/>
                                     <constraint firstAttribute="height" constant="52" id="z83-wQ-aBP"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="QSq-UO-sCx" appends="YES" id="6v8-60-Gz5"/>
+                                </connections>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNc-9g-3bB">
                                 <rect key="frame" x="0.0" y="92" width="414" height="692"/>
@@ -985,6 +989,11 @@
                         <action selector="tapBackButton:" destination="T3j-9g-FJW" id="F1M-Qd-oc1"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="QSq-UO-sCx">
+                    <connections>
+                        <action selector="tapAssignArea:" destination="T3j-9g-FJW" id="H9m-Ld-Zor"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1257" y="-16"/>
         </scene>
@@ -1088,12 +1097,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFb-Ha-2K8">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBack" translatesAutoresizingMaskIntoConstraints="NO" id="pxV-D6-Ei0">
-                                        <rect key="frame" x="12" y="12" width="24" height="24"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="pxV-D6-Ei0">
+                                        <rect key="frame" x="12" y="16.5" width="15" height="15"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="24" id="3gi-Z5-rtJ"/>
-                                            <constraint firstAttribute="width" constant="24" id="nAe-Mz-yGu"/>
+                                            <constraint firstAttribute="height" constant="15" id="3gi-Z5-rtJ"/>
+                                            <constraint firstAttribute="width" constant="15" id="nAe-Mz-yGu"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="F4j-D6-mLS" appends="YES" id="4Ff-B0-dU5"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6Y-c1-xU9">
                                         <rect key="frame" x="181" y="15.5" width="52.5" height="17"/>
@@ -1272,6 +1285,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ew0-ZB-INc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZE4-e6-nf4" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="F4j-D6-mLS">
+                    <connections>
+                        <action selector="tapCloseButton:" destination="jAy-Yk-0aw" id="16f-T7-siL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2915.9420289855075" y="-16.071428571428569"/>
         </scene>
@@ -1280,6 +1298,7 @@
         <image name="icBack" width="24" height="24"/>
         <image name="icRightArrow" width="9" height="16"/>
         <image name="icTextfieldCancel" width="16" height="16"/>
+        <image name="ic_cancel" width="14" height="14"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

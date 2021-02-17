@@ -60,6 +60,8 @@ class AddressResultVC: UIViewController {
         writeAddressField.backgroundColor = .clear
         writeAddressField.borderStyle = .none
         writeAddressField.tintColor = .black
+        
+        closeButton.isUserInteractionEnabled = true
     }
     
     func setTapGesture() {
@@ -71,6 +73,11 @@ class AddressResultVC: UIViewController {
     @objc func tapCancleTextField(sender : UITapGestureRecognizer){
         writeAddressField.text = ""
     }
+    
+    @IBAction func tapCloseButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AddressResultVC : UITableViewDelegate, UITableViewDataSource {

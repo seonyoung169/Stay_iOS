@@ -47,6 +47,8 @@
 		A9A80E8B25BE7C8C00B22665 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */; };
 		A9A80E9025BE7D1500B22665 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80E8F25BE7D1500B22665 /* CalendarService.swift */; };
 		A9A80EB325BEAB7200B22665 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A80EB225BEAB7200B22665 /* NoticeTableViewCell.swift */; };
+		A9B10C4425DCDDEF0038A0D1 /* AddPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B10C4325DCDDEF0038A0D1 /* AddPlaceModel.swift */; };
+		A9B10C4925DCDEC20038A0D1 /* AddPlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B10C4825DCDEC20038A0D1 /* AddPlaceService.swift */; };
 		A9E6DA3125C6A254004D304F /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6DA3025C6A254004D304F /* NoticeModel.swift */; };
 		A9E6DA3625C6A2B4004D304F /* NoticeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6DA3525C6A2B4004D304F /* NoticeService.swift */; };
 		A9E6DA4425CA6477004D304F /* LocationAgreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E6DA4325CA6477004D304F /* LocationAgreeVC.swift */; };
@@ -118,6 +120,8 @@
 		A9A80E8A25BE7C8C00B22665 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		A9A80E8F25BE7D1500B22665 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		A9A80EB225BEAB7200B22665 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
+		A9B10C4325DCDDEF0038A0D1 /* AddPlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceModel.swift; sourceTree = "<group>"; };
+		A9B10C4825DCDEC20038A0D1 /* AddPlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceService.swift; sourceTree = "<group>"; };
 		A9E6DA3025C6A254004D304F /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
 		A9E6DA3525C6A2B4004D304F /* NoticeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeService.swift; sourceTree = "<group>"; };
 		A9E6DA4325CA6477004D304F /* LocationAgreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAgreeVC.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				A9E6DA3025C6A254004D304F /* NoticeModel.swift */,
 				A9488DF725D4046100F213BE /* AddressModel.swift */,
 				A9488E3D25D6545C00F213BE /* MyPlaceModel.swift */,
+				A9B10C4325DCDDEF0038A0D1 /* AddPlaceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				A9E6DA3525C6A2B4004D304F /* NoticeService.swift */,
 				A9488DFC25D40FC300F213BE /* AddressService.swift */,
 				A9488E4225D654CC00F213BE /* MyPlaceService.swift */,
+				A9B10C4825DCDEC20038A0D1 /* AddPlaceService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				A9E6DA3625C6A2B4004D304F /* NoticeService.swift in Sources */,
 				A9488E4325D654CC00F213BE /* MyPlaceService.swift in Sources */,
 				A97CD3B425C522BE009D0614 /* HomeModel.swift in Sources */,
+				A9B10C4925DCDEC20038A0D1 /* AddPlaceService.swift in Sources */,
 				A9383BE125A9DE0D00F803D2 /* AppDelegate.swift in Sources */,
 				A9488E3925D6526800F213BE /* MyPlaceTableViewCell.swift in Sources */,
 				A9383C4925AC059300F803D2 /* FriendTableViewCell.swift in Sources */,
@@ -574,6 +581,7 @@
 				A9A80EB325BEAB7200B22665 /* NoticeTableViewCell.swift in Sources */,
 				A996DB2525CC1DA600EB03B3 /* AddressSearchVC.swift in Sources */,
 				A9E6DA3125C6A254004D304F /* NoticeModel.swift in Sources */,
+				A9B10C4425DCDDEF0038A0D1 /* AddPlaceModel.swift in Sources */,
 				A9383C3825AB2B0200F803D2 /* CalendarVC.swift in Sources */,
 				A9E6DA4425CA6477004D304F /* LocationAgreeVC.swift in Sources */,
 				A9488E3E25D6545C00F213BE /* MyPlaceModel.swift in Sources */,
